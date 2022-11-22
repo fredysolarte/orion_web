@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2016-11-28T10:10:24.0000000-05:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>C:\publicaciones\Sistema_20140716_0700</_PublishTargetUrl>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>09/28/2013 17:51:50</publishTime>
+    </File>
+    <File Include="Administrador/CrearFormularios.aspx">
+      <publishTime>09/15/2016 08:10:08</publishTime>
+    </File>
+    <File Include="Administrador/CrearModulo.aspx">
+      <publishTime>07/24/2013 10:21:16</publishTime>
+    </File>
+    <File Include="Administrador/CrearOpcion.aspx">
+      <publishTime>09/21/2016 14:47:56</publishTime>
+    </File>
+    <File Include="Administrador/CrearSistema.aspx">
+      <publishTime>06/20/2013 08:08:34</publishTime>
+    </File>
+    <File Include="Administrador/Default.aspx">
+      <publishTime>06/20/2013 08:01:56</publishTime>
+    </File>
+    <File Include="Administrador/Download.aspx">
+      <publishTime>11/28/2011 09:44:10</publishTime>
+    </File>
+    <File Include="Administrador/Roles.aspx">
+      <publishTime>02/28/2018 14:01:21</publishTime>
+    </File>
+    <File Include="Administrador/Usuario.aspx">
+      <publishTime>07/05/2014 08:11:22</publishTime>
+    </File>
+    <File Include="App_Browsers/compress.browser">
+      <publishTime>07/30/2013 07:21:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/1-new-folder.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/1-open.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/1-paste.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/1-properties.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/2-mail.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/2-web-sharing.png">
+      <publishTime>10/21/2014 18:53:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/AddRecord.gif">
+      <publishTime>09/03/2016 17:13:36</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/aiwrap.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/bglogin.jpg">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Buscar.gif">
+      <publishTime>12/17/2011 13:18:50</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/button.png">
+      <publishTime>10/21/2014 18:53:22</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/calendar.png">
+      <publishTime>10/21/2014 18:53:22</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Cancel.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Chart.png">
+      <publishTime>10/21/2014 18:53:28</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/contrasena.png">
+      <publishTime>02/23/2018 16:46:24</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Delete.gif">
+      <publishTime>09/05/2016 08:00:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Edit.gif">
+      <publishTime>09/03/2016 17:17:20</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Edit_.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Excel_XLSX.png">
+      <publishTime>12/18/2017 12:19:05</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/find.gif">
+      <publishTime>09/03/2016 17:30:04</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/find_.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/GridView.png">
+      <publishTime>10/21/2014 18:53:28</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Home2.png">
+      <publishTime>10/21/2014 18:53:22</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/icon.ico">
+      <publishTime>08/22/2016 08:57:52</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img01.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img02.jpg">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img03.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img04.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img05.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img06.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/img07.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/imprimir.gif">
+      <publishTime>09/05/2016 07:57:48</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/imprimir.png">
+      <publishTime>09/29/2013 09:01:02</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/liquidar.gif">
+      <publishTime>09/23/2016 09:13:22</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/ListView.png">
+      <publishTime>10/21/2014 18:53:28</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/logo-xuss.png">
+      <publishTime>07/06/2017 11:32:51</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/logout.png">
+      <publishTime>02/23/2018 17:01:55</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/msoffice_chart.png">
+      <publishTime>10/21/2014 18:53:22</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Next.png">
+      <publishTime>10/21/2014 18:53:32</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/PROXUMO.gif">
+      <publishTime>12/17/2011 13:24:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Scheduler.png">
+      <publishTime>10/21/2014 18:53:28</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Sempresa.jpg">
+      <publishTime>07/12/2012 13:50:30</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/treeview.png">
+      <publishTime>10/21/2014 18:53:24</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/Update.gif">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/user.png">
+      <publishTime>02/23/2018 16:48:37</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/Images/versions.png">
+      <publishTime>10/21/2014 18:53:24</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/css/Style.css">
+      <publishTime>02/23/2018 16:54:24</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/background.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/button.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/button_browse.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/button_browse_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/button_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/calender_next.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/calender_prev.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/button_highlight.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/button_highlight_selected.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/button_home.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/header_inner.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/header_inner_corners.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/login_corners.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/menu_arrow.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/menu_border.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/menu_l_selected.png">
+      <publishTime>06/01/2013 09:34:34</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/menu_r_selected.png">
+      <publishTime>06/01/2013 09:33:24</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/menu_selected.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/quick_l.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/quick_r.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/title.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/title_link.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/blue/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/button_highlight.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/button_highlight_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/button_home.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/header_inner.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/header_inner_corners.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/login_corners.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/menu_arrow.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/menu_border.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/menu_l_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/menu_r_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/menu_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/quick_l.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/quick_r.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/title.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/title_link.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/brown/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/button_highlight.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/button_highlight_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/button_home.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/header_inner.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/header_inner_corners.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/login_corners.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/menu_arrow.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/menu_border.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/menu_l_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/menu_r_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/menu_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/quick_l.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/quick_r.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/title.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/title_link.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/green/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/button_highlight.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/button_highlight_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/button_home.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/header_inner.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/header_inner_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/login_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/menu_arrow.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/menu_border.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/menu_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/menu_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/menu_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/quick_l.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/quick_r.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/title.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/title_link.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/greyblue/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/button_highlight.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/button_highlight_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/button_home.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/header_inner.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/header_inner_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/login_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/menu_arrow.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/menu_border.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/menu_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/menu_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/menu_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/quick_l.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/quick_r.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/title.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/title_link.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/purple/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/button_highlight.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/button_highlight_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/button_home.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/header_inner.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/header_inner_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/login_corners.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/menu_arrow.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/menu_border.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/menu_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/menu_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/menu_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/quick_l.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/quick_l_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/quick_r.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/quick_r_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/title.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/title_link.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/colors/red/title_tab_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/content.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/content_alternate.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/content_fixed.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/content_left_top.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/header_background.png">
+      <publishTime>04/24/2013 10:02:56</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/application_double.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/calendar.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/cog.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/cross.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/error.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/exclamation.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/house.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/notice.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/page_white_copy.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/success.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/tick.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/warning.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/icons/world_link.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/login.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/logo.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/menu.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/menu_l.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/menu_minus.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/menu_plus.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/menu_r.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/minus.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/misc/biscuits.jpg">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/misc/ginger.jpg">
+      <publishTime>09/01/2011 14:33:38</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/overlay.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/pager.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/pager_selected.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/plus.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/calendar.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-icons_222222_256x240.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-icons_228ef1_256x240.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-icons_ef8c08_256x240.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-icons_ffd27a_256x240.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/images/ui/ui-icons_ffffff_256x240.png">
+      <publishTime>09/01/2011 14:33:40</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/excanvas.min.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/jquery-1.4.2.min.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/jquery-ui-1.8.custom.min.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/jquery.flot.min.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/jquery.ui.selectmenu.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.autocomplete.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.chart.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.dialog.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.form.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.menu.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/resources/scripts/smooth.table.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="App_Themes/Tema2/SkinUC.skin">
+      <publishTime>11/02/2016 16:24:54</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/26/2017 20:26:45</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.pdb">
+      <publishTime>07/31/2011 23:09:32</publishTime>
+    </File>
+    <File Include="bin/ar/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:32</publishTime>
+    </File>
+    <File Include="bin/cs/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:32</publishTime>
+    </File>
+    <File Include="bin/de/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:32</publishTime>
+    </File>
+    <File Include="bin/es/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:32</publishTime>
+    </File>
+    <File Include="bin/FastReport.Bars.dll">
+      <publishTime>01/31/2017 14:27:59</publishTime>
+    </File>
+    <File Include="bin/FastReport.dll">
+      <publishTime>01/31/2017 14:28:07</publishTime>
+    </File>
+    <File Include="bin/FastReport.Editor.dll">
+      <publishTime>03/02/2014 08:36:10</publishTime>
+    </File>
+    <File Include="bin/FastReport.Web.dll">
+      <publishTime>03/02/2014 08:36:08</publishTime>
+    </File>
+    <File Include="bin/fr/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/he/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/hi/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/it/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>05/20/2014 10:24:02</publishTime>
+    </File>
+    <File Include="bin/ja/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/ko/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>04/16/2010 14:16:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.pdb">
+      <publishTime>04/16/2010 14:11:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.xml">
+      <publishTime>04/16/2010 14:11:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <publishTime>04/16/2010 14:16:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.pdb">
+      <publishTime>04/16/2010 14:11:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.xml">
+      <publishTime>04/16/2010 14:11:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>04/16/2010 14:16:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.pdb">
+      <publishTime>04/16/2010 13:42:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>04/16/2010 13:42:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.Interception.dll">
+      <publishTime>04/16/2010 13:42:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.Interception.pdb">
+      <publishTime>04/16/2010 13:42:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.pdb">
+      <publishTime>04/16/2010 13:42:32</publishTime>
+    </File>
+    <File Include="bin/nl/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/pt/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/ru/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/Structure.Common.Utils.dll">
+      <publishTime>10/31/2016 17:07:03</publishTime>
+    </File>
+    <File Include="bin/Structure.Common.Utils.pdb">
+      <publishTime>10/31/2016 17:07:03</publishTime>
+    </File>
+    <File Include="bin/Structure.DBSession.dll">
+      <publishTime>10/31/2016 17:07:04</publishTime>
+    </File>
+    <File Include="bin/Structure.DBSession.pdb">
+      <publishTime>10/31/2016 17:07:04</publishTime>
+    </File>
+    <File Include="bin/Structure.Framework.Mapping.dll">
+      <publishTime>05/27/2014 08:43:29</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>10/23/2014 16:53:48</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.Skins.dll">
+      <publishTime>10/23/2014 16:53:48</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.xml">
+      <publishTime>10/24/2014 16:51:54</publishTime>
+    </File>
+    <File Include="bin/tr-TR/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:34</publishTime>
+    </File>
+    <File Include="bin/VisorPdf.dll">
+      <publishTime>10/31/2016 17:07:04</publishTime>
+    </File>
+    <File Include="bin/XUSS.BLL.dll">
+      <publishTime>03/08/2018 10:08:11</publishTime>
+    </File>
+    <File Include="bin/XUSS.BLL.pdb">
+      <publishTime>11/28/2016 10:09:14</publishTime>
+    </File>
+    <File Include="bin/XUSS.DAL.dll">
+      <publishTime>03/08/2018 10:08:07</publishTime>
+    </File>
+    <File Include="bin/XUSS.DAL.pdb">
+      <publishTime>11/28/2016 10:09:05</publishTime>
+    </File>
+    <File Include="bin/XUSS.WEB.dll">
+      <publishTime>03/08/2018 10:08:18</publishTime>
+    </File>
+    <File Include="bin/XUSS.WEB.pdb">
+      <publishTime>11/28/2016 10:09:26</publishTime>
+    </File>
+    <File Include="bin/zh-CHS/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:36</publishTime>
+    </File>
+    <File Include="bin/zh-CHT/AjaxControlToolkit.resources.dll">
+      <publishTime>07/31/2011 23:09:36</publishTime>
+    </File>
+    <File Include="Calidad/CtrlCalidad.aspx">
+      <publishTime>07/29/2013 15:57:02</publishTime>
+    </File>
+    <File Include="Calidad/Default.aspx">
+      <publishTime>09/01/2011 14:42:10</publishTime>
+    </File>
+    <File Include="Compras/OrdenesCompras.aspx">
+      <publishTime>02/15/2018 06:57:29</publishTime>
+    </File>
+    <File Include="Compras/ProntaModa.aspx">
+      <publishTime>08/31/2017 10:58:32</publishTime>
+    </File>
+    <File Include="Compras/RecepcionCompras.aspx">
+      <publishTime>06/07/2017 08:55:03</publishTime>
+    </File>
+    <File Include="Consultas/ConDescuentosArticulos.aspx">
+      <publishTime>04/09/2013 14:01:18</publishTime>
+    </File>
+    <File Include="Consultas/ConsultaMovimientos.aspx">
+      <publishTime>01/30/2018 09:52:02</publishTime>
+    </File>
+    <File Include="Consultas/ConsultaPagos.aspx">
+      <publishTime>11/17/2017 09:24:59</publishTime>
+    </File>
+    <File Include="Consultas/ConsultasFacturas.aspx">
+      <publishTime>12/21/2017 11:59:03</publishTime>
+    </File>
+    <File Include="Consultas/ConsultaVentasCarteraVendedor.aspx">
+      <publishTime>03/17/2017 12:15:17</publishTime>
+    </File>
+    <File Include="Consultas/ConsultaVentasDetalle.aspx">
+      <publishTime>02/23/2018 12:19:11</publishTime>
+    </File>
+    <File Include="Consultas/ConsultaVentasG.aspx">
+      <publishTime>12/12/2013 10:35:44</publishTime>
+    </File>
+    <File Include="Consultas/CstInventarios.aspx">
+      <publishTime>12/17/2013 10:34:18</publishTime>
+    </File>
+    <File Include="Consultas/CtaUsuariosRegistrados.aspx">
+      <publishTime>10/02/2012 14:22:34</publishTime>
+    </File>
+    <File Include="Consultas/CtaVentas.aspx">
+      <publishTime>12/12/2013 10:35:04</publishTime>
+    </File>
+    <File Include="Consultas/cVentasVendedor.aspx">
+      <publishTime>01/20/2015 08:35:08</publishTime>
+    </File>
+    <File Include="Consultas/DashBoard.aspx">
+      <publishTime>10/25/2017 08:58:15</publishTime>
+    </File>
+    <File Include="Consultas/Default.aspx">
+      <publishTime>12/07/2011 18:16:18</publishTime>
+    </File>
+    <File Include="Consultas/DesmPersonal.aspx">
+      <publishTime>02/19/2013 18:59:38</publishTime>
+    </File>
+    <File Include="Consultas/DesmPuntoVenta.aspx">
+      <publishTime>01/28/2014 14:54:38</publishTime>
+    </File>
+    <File Include="Consultas/DesmTotal.aspx">
+      <publishTime>12/16/2013 09:28:06</publishTime>
+    </File>
+    <File Include="Consultas/HojaKardex.aspx">
+      <publishTime>12/18/2017 12:45:42</publishTime>
+    </File>
+    <File Include="Consultas/InventarioDisponible.aspx">
+      <publishTime>02/27/2018 10:53:36</publishTime>
+    </File>
+    <File Include="Consultas/ReposicionDiaria.aspx">
+      <publishTime>02/12/2014 12:43:22</publishTime>
+    </File>
+    <File Include="Consultas/SqlExplorer.aspx">
+      <publishTime>12/16/2013 09:30:46</publishTime>
+    </File>
+    <File Include="Contabilidad/CausacionProveedores.aspx">
+      <publishTime>02/09/2014 14:03:02</publishTime>
+    </File>
+    <File Include="Contabilidad/CentroCostos.aspx">
+      <publishTime>01/29/2014 18:54:12</publishTime>
+    </File>
+    <File Include="Contabilidad/Default.aspx">
+      <publishTime>09/02/2013 12:22:28</publishTime>
+    </File>
+    <File Include="Contabilidad/MaestroDocumentos.aspx">
+      <publishTime>01/28/2014 18:13:42</publishTime>
+    </File>
+    <File Include="Contabilidad/MaestroTerceros.aspx">
+      <publishTime>02/03/2014 09:52:18</publishTime>
+    </File>
+    <File Include="Contabilidad/PlanillaCuentas.aspx">
+      <publishTime>12/17/2013 10:41:10</publishTime>
+    </File>
+    <File Include="Contabilidad/TercerosContabilidad.aspx">
+      <publishTime>02/04/2014 07:29:20</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/04/2016 08:44:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="ControlesUsuario/ConsultaInv.ascx">
+      <publishTime>09/01/2011 14:42:10</publishTime>
+    </File>
+    <File Include="ControlesUsuario/Ctl_Articulos.ascx">
+      <publishTime>10/02/2012 14:22:34</publishTime>
+    </File>
+    <File Include="ControlesUsuario/Ctl_BodegaFecha.ascx">
+      <publishTime>09/01/2011 14:42:10</publishTime>
+    </File>
+    <File Include="ControlesUsuario/Ctl_Personas.ascx">
+      <publishTime>10/02/2012 14:22:34</publishTime>
+    </File>
+    <File Include="ControlesUsuario/ctrl_gesArticulosHor.ascx">
+      <publishTime>04/12/2013 09:17:14</publishTime>
+    </File>
+    <File Include="ControlesUsuario/LoadFileBinary.ascx">
+      <publishTime>02/08/2012 12:33:40</publishTime>
+    </File>
+    <File Include="ControlesUsuario/UserControlAdvancedDropDownList.ascx">
+      <publishTime>01/28/2014 14:50:20</publishTime>
+    </File>
+    <File Include="ControlesUsuario/UserControlAdvancedDropDownListText.ascx">
+      <publishTime>01/28/2014 14:54:34</publishTime>
+    </File>
+    <File Include="Costos/CargarCostos.aspx">
+      <publishTime>03/08/2017 10:12:29</publishTime>
+    </File>
+    <File Include="Costos/Costos.aspx">
+      <publishTime>08/12/2013 08:14:00</publishTime>
+    </File>
+    <File Include="Costos/DecuentoCedula.aspx">
+      <publishTime>01/28/2014 15:18:46</publishTime>
+    </File>
+    <File Include="Costos/Default.aspx">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="Costos/Descuentos.aspx">
+      <publishTime>04/12/2013 09:35:02</publishTime>
+    </File>
+    <File Include="Costos/Obsequios.aspx">
+      <publishTime>09/27/2012 15:57:00</publishTime>
+    </File>
+    <File Include="Costos/Presupuesto.aspx">
+      <publishTime>10/09/2017 08:20:04</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>08/22/2017 10:16:15</publishTime>
+    </File>
+    <File Include="Facturacion/Bonos.aspx">
+      <publishTime>02/24/2018 15:56:38</publishTime>
+    </File>
+    <File Include="Facturacion/CierreCaja.aspx">
+      <publishTime>04/29/2017 10:22:13</publishTime>
+    </File>
+    <File Include="Facturacion/Devoluciones.aspx">
+      <publishTime>11/29/2017 11:04:33</publishTime>
+    </File>
+    <File Include="Facturacion/FacturacionPedido.aspx">
+      <publishTime>11/29/2017 11:04:55</publishTime>
+    </File>
+    <File Include="Facturacion/FacturaDirecta.aspx">
+      <publishTime>03/02/2018 08:00:26</publishTime>
+    </File>
+    <File Include="Facturacion/Garantias.aspx">
+      <publishTime>09/25/2017 08:42:12</publishTime>
+    </File>
+    <File Include="Facturacion/Notas.aspx">
+      <publishTime>03/08/2018 08:59:54</publishTime>
+    </File>
+    <File Include="Facturacion/Remisiones.aspx">
+      <publishTime>02/20/2018 12:23:18</publishTime>
+    </File>
+    <File Include="Facturacion/Separados.aspx">
+      <publishTime>11/29/2017 11:05:07</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="Inventarios/CargueInventarios.aspx">
+      <publishTime>02/08/2018 14:09:23</publishTime>
+    </File>
+    <File Include="Inventarios/FotoInventario.aspx">
+      <publishTime>07/18/2017 15:34:44</publishTime>
+    </File>
+    <File Include="Inventarios/ImpresionRotulos.aspx">
+      <publishTime>11/10/2017 11:14:32</publishTime>
+    </File>
+    <File Include="Inventarios/MovimientosManuales.aspx">
+      <publishTime>02/20/2018 16:23:33</publishTime>
+    </File>
+    <File Include="Inventarios/Traslados.aspx">
+      <publishTime>02/23/2018 11:58:41</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>08/26/2016 14:48:38</publishTime>
+    </File>
+    <File Include="LtaEmpaque/LtaEmpaque.aspx">
+      <publishTime>02/19/2018 07:05:40</publishTime>
+    </File>
+    <File Include="Master/MasterAdmin.Master">
+      <publishTime>08/23/2017 10:31:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/26/2017 20:30:43</publishTime>
+    </File>
+    <File Include="Parametros/ClasesParametros.aspx">
+      <publishTime>02/26/2018 16:08:05</publishTime>
+    </File>
+    <File Include="Parametros/ClavesAlternas.aspx">
+      <publishTime>03/28/2017 12:26:47</publishTime>
+    </File>
+    <File Include="Parametros/LstPrecios.aspx">
+      <publishTime>08/23/2017 10:06:41</publishTime>
+    </File>
+    <File Include="Parametros/MaestroBodegas.aspx">
+      <publishTime>07/12/2017 15:35:02</publishTime>
+    </File>
+    <File Include="Parametros/PoliticasComerciales.aspx">
+      <publishTime>01/26/2018 15:21:09</publishTime>
+    </File>
+    <File Include="Parametros/ReportesFormularios.aspx">
+      <publishTime>06/14/2017 16:22:17</publishTime>
+    </File>
+    <File Include="Parametros/TipoFactura.aspx">
+      <publishTime>02/09/2018 08:24:58</publishTime>
+    </File>
+    <File Include="Parametros/TipoProductos.aspx">
+      <publishTime>05/18/2017 19:03:07</publishTime>
+    </File>
+    <File Include="Parametros/TiposPedido.aspx">
+      <publishTime>02/04/2017 16:31:56</publishTime>
+    </File>
+    <File Include="Pedidos/Pedidos.aspx">
+      <publishTime>02/28/2018 14:28:08</publishTime>
+    </File>
+    <File Include="Presupuesto/PresupuestoVendedor.aspx">
+      <publishTime>03/08/2017 14:52:47</publishTime>
+    </File>
+    <File Include="Recaudo/Recaudo.aspx">
+      <publishTime>11/12/2016 08:54:32</publishTime>
+    </File>
+    <File Include="Reportes/CierreCaja.aspx">
+      <publishTime>10/02/2012 14:22:36</publishTime>
+    </File>
+    <File Include="Reportes/Default.aspx">
+      <publishTime>09/01/2011 14:42:10</publishTime>
+    </File>
+    <File Include="Reportes/InventariosVsVentas.aspx">
+      <publishTime>12/21/2012 11:24:40</publishTime>
+    </File>
+    <File Include="Reportes/Visor.aspx">
+      <publishTime>10/19/2016 10:32:16</publishTime>
+    </File>
+    <File Include="Reportes/VisorPantallaCompleta.aspx">
+      <publishTime>06/28/2017 17:30:01</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>10/27/2016 15:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>09/01/2011 14:33:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1-vsdoc.js">
+      <publishTime>10/27/2016 15:01:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>10/27/2016 15:01:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>10/27/2016 15:01:16</publishTime>
+    </File>
+    <File Include="Tareas/Default.aspx">
+      <publishTime>11/06/2011 16:33:28</publishTime>
+    </File>
+    <File Include="Tareas/LstTareas.aspx">
+      <publishTime>03/04/2013 11:00:18</publishTime>
+    </File>
+    <File Include="Tareas/Polla.aspx">
+      <publishTime>06/06/2014 08:47:50</publishTime>
+    </File>
+    <File Include="Tareas/Scheduler.aspx">
+      <publishTime>06/30/2017 20:28:12</publishTime>
+    </File>
+    <File Include="Terceros/Default.aspx">
+      <publishTime>11/07/2012 09:14:52</publishTime>
+    </File>
+    <File Include="Terceros/InventarioEquipos.aspx">
+      <publishTime>07/29/2013 15:54:14</publishTime>
+    </File>
+    <File Include="Terceros/js/app.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/cors/jquery.postmessage-transport.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/cors/jquery.xdr-transport.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-angular.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-audio.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-image.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-jquery-ui.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-process.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-ui.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-validate.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload-video.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.fileupload.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/jquery.iframe-transport.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/main.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/js/vendor/jquery.ui.widget.js">
+      <publishTime>02/19/2018 04:12:28</publishTime>
+    </File>
+    <File Include="Terceros/MaestroArticulos.aspx">
+      <publishTime>02/24/2018 12:33:18</publishTime>
+    </File>
+    <File Include="Terceros/RegistroClientes.aspx">
+      <publishTime>12/12/2013 10:32:10</publishTime>
+    </File>
+    <File Include="Terceros/Terceros.aspx">
+      <publishTime>06/20/2017 16:14:38</publishTime>
+    </File>
+    <File Include="VisorPdf.aspx">
+      <publishTime>06/27/2017 08:33:26</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/08/2018 10:08:33</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C246C78-0F8E-4494-871E-C1F3EAC10E5D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XUSS.WEB</RootNamespace>
+    <AssemblyName>XUSS.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>xuss.sistema.net</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>true</PublishDatabases>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2014.1.6.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2014.1.6.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=2014.1.6.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Structure.DBSession, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\DBSession\bin\Debug\Structure.DBSession.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.Design, Version=2021.2.616.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R2 2021\Bin40\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2021.2.616.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2021.2.616.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2021.2.616.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Abstractions">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="VisorPdf">
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\VisorPdf\bin\Debug\VisorPdf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Administrador\CrearFormularios.aspx" />
+    <Content Include="Administrador\CrearModulo.aspx" />
+    <Content Include="Administrador\CrearOpcion.aspx" />
+    <Content Include="Administrador\CrearSistema.aspx" />
+    <Content Include="Administrador\Default.aspx" />
+    <Content Include="Administrador\Download.aspx" />
+    <Content Include="Administrador\Roles.aspx" />
+    <Content Include="Administrador\Usuario.aspx" />
+    <Content Include="App_Themes\Tema2\Images\1-new-folder.png" />
+    <Content Include="App_Themes\Tema2\Images\1-open.png" />
+    <Content Include="App_Themes\Tema2\Images\1-paste.png" />
+    <Content Include="App_Themes\Tema2\Images\1-properties.png" />
+    <Content Include="App_Themes\Tema2\Images\2-mail.png" />
+    <Content Include="App_Themes\Tema2\Images\2-web-sharing.png" />
+    <Content Include="App_Themes\Tema2\Images\Buscar.gif" />
+    <Content Include="App_Themes\Tema2\Images\button.png" />
+    <Content Include="App_Themes\Tema2\Images\calendar.png" />
+    <Content Include="App_Themes\Tema2\Images\ChangeEditingPermissions.png" />
+    <Content Include="App_Themes\Tema2\Images\Chart.png" />
+    <Content Include="App_Themes\Tema2\Images\contrasena.png" />
+    <Content Include="App_Themes\Tema2\Images\Edit_.gif" />
+    <Content Include="App_Themes\Tema2\Images\Excel_XLSX.png" />
+    <Content Include="App_Themes\Tema2\Images\find.gif" />
+    <Content Include="App_Themes\Tema2\Images\find_.png" />
+    <Content Include="App_Themes\Tema2\Images\gestion.png" />
+    <Content Include="App_Themes\Tema2\Images\GridView.png" />
+    <Content Include="App_Themes\Tema2\Images\Home2.png" />
+    <Content Include="App_Themes\Tema2\Images\icon.ico" />
+    <Content Include="App_Themes\Tema2\Images\imprimir.gif" />
+    <Content Include="App_Themes\Tema2\Images\imprimir.png" />
+    <Content Include="App_Themes\Tema2\Images\liquidar.gif" />
+    <Content Include="App_Themes\Tema2\Images\ListView.png" />
+    <Content Include="App_Themes\Tema2\Images\logout.png" />
+    <Content Include="App_Themes\Tema2\Images\msoffice_chart.png" />
+    <Content Include="App_Themes\Tema2\Images\Next.png" />
+    <Content Include="App_Themes\Tema2\Images\PROXUMO.gif" />
+    <Content Include="App_Themes\Tema2\Images\Scheduler.png" />
+    <Content Include="App_Themes\Tema2\Images\Sempresa.jpg" />
+    <Content Include="App_Themes\Tema2\Images\table.png" />
+    <Content Include="App_Themes\Tema2\Images\treeview.png" />
+    <Content Include="App_Themes\Tema2\Images\user-32.png" />
+    <Content Include="App_Themes\Tema2\Images\user.png" />
+    <Content Include="App_Themes\Tema2\Images\versions.png" />
+    <Content Include="App_Themes\Tema2\resources\css\style %281%29.css" />
+    <Content Include="App_Themes\Tema2\resources\css\style %282%29.css" />
+    <Content Include="App_Themes\Tema2\resources\css\style%281%29.css" />
+    <Content Include="App_Themes\Tema2\resources\css\Style.css" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery.simplemodal.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\osx.js" />
+    <Content Include="App_Themes\TemaLogin\css\main.css" />
+    <Content Include="App_Themes\TemaLogin\css\util.css" />
+    <Content Include="App_Themes\TemaLogin\images\bg-01.jpg" />
+    <Content Include="App_Themes\TemaLogin\js\main.js" />
+    <Content Include="App_Themes\TemaLogin\js\map-custom.js" />
+    <Content Include="App_Themes\TemaLogin\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Calidad\CtrlCalidad.aspx" />
+    <Content Include="Calidad\Default.aspx" />
+    <Content Include="Compras\AprobacionOC.aspx" />
+    <Content Include="Compras\CambioCantidadesOC.aspx" />
+    <Content Include="Compras\ConsultaCuentasxPagar.aspx" />
+    <Content Include="Compras\CuentasxPagar.aspx" />
+    <Content Include="Compras\LogisticaIn.aspx" />
+    <Content Include="Compras\LogisticaOut.aspx" />
+    <Content Include="Compras\OrdenesCompras.aspx" />
+    <Content Include="Compras\ProntaModa.aspx" />
+    <Content Include="Compras\RecepcionCompras.aspx" />
+    <Content Include="Compras\SegregacionFacturas.aspx" />
+    <Content Include="Compras\SegregacionV2.aspx" />
+    <Content Include="Consultas\ConDescuentosArticulos.aspx" />
+    <Content Include="Consultas\ConsultaBonos.aspx" />
+    <Content Include="Consultas\ConsultaMovimientos.aspx" />
+    <Content Include="Consultas\ConsultaPagos.aspx" />
+    <Content Include="Consultas\ConsultasFacturas.aspx" />
+    <Content Include="Consultas\ConsultaVentasCarteraVendedor.aspx" />
+    <Content Include="Consultas\ConsultaVentasDetalle.aspx" />
+    <Content Include="Consultas\ConsultaVentasG.aspx" />
+    <Content Include="Consultas\CstInventarios.aspx" />
+    <Content Include="Consultas\CtaVentas.aspx" />
+    <Content Include="Consultas\cVentasVendedor.aspx" />
+    <Content Include="Consultas\DashBoard.aspx" />
+    <Content Include="Consultas\Default.aspx" />
+    <Content Include="Consultas\DesmPersonal.aspx" />
+    <Content Include="Consultas\DesmPuntoVenta.aspx" />
+    <Content Include="Consultas\DesmTotal.aspx" />
+    <Content Include="Consultas\EstadoPedidosGantt.aspx" />
+    <Content Include="Consultas\HojaKardex.aspx" />
+    <Content Include="Consultas\InventarioDisponible.aspx" />
+    <Content Include="Consultas\ReposicionDiaria.aspx" />
+    <Content Include="Consultas\SqlExplorer.aspx" />
+    <Content Include="Contabilidad\BalanceComprobacion.aspx" />
+    <Content Include="Contabilidad\CausacionProveedores.aspx" />
+    <Content Include="Contabilidad\CentroCostos.aspx" />
+    <Content Include="Contabilidad\CierreContable.aspx" />
+    <Content Include="Contabilidad\ComprobanteRetenciones.aspx" />
+    <Content Include="Contabilidad\ConciliacionBancos.aspx" />
+    <Content Include="Contabilidad\ConsultaMovimientos.aspx" />
+    <Content Include="Contabilidad\Default.aspx" />
+    <Content Include="Contabilidad\DiarioLegal.aspx" />
+    <Content Include="Contabilidad\MaestroDocumentos.aspx" />
+    <Content Include="Contabilidad\MayorAnalitico.aspx" />
+    <Content Include="Contabilidad\Meses.aspx" />
+    <Content Include="Contabilidad\PlanillaCuentas.aspx" />
+    <Content Include="Contabilidad\PlanillaImpuestos.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="ControlesUsuario\ConsultaInv.ascx" />
+    <Content Include="ControlesUsuario\Ctl_Articulos.ascx" />
+    <Content Include="ControlesUsuario\Ctl_BodegaFecha.ascx" />
+    <Content Include="ControlesUsuario\Ctl_Personas.ascx" />
+    <Content Include="ControlesUsuario\ctrl_gesArticulosHor.ascx" />
+    <Content Include="ControlesUsuario\LoadFileBinary.ascx" />
+    <Content Include="ControlesUsuario\UserControlAdvancedDropDownList.ascx" />
+    <Content Include="ControlesUsuario\UserControlAdvancedDropDownListText.ascx" />
+    <Content Include="Correspondencia\CorrespondenciaIn.aspx" />
+    <Content Include="Correspondencia\CorrespondenciaOut.aspx" />
+    <Content Include="Correspondencia\PlanillaDesmontes.aspx" />
+    <Content Include="Costos\CargarCostos.aspx" />
+    <Content Include="Costos\Costos.aspx" />
+    <Content Include="Costos\DecuentoCedula.aspx" />
+    <Content Include="Costos\Default.aspx" />
+    <Content Include="Consultas\CtaUsuariosRegistrados.aspx" />
+    <Content Include="Costos\Descuentos.aspx" />
+    <Content Include="Costos\LiquidarCostos.aspx" />
+    <Content Include="Costos\Obsequios.aspx" />
+    <Content Include="Costos\Presupuesto.aspx" />
+    <Content Include="Facturacion\Bonos.aspx" />
+    <Content Include="Facturacion\CierreCaja.aspx" />
+    <Content Include="Facturacion\Devoluciones.aspx" />
+    <Content Include="Facturacion\EmpaquePedido.aspx" />
+    <Content Include="Facturacion\FacturacionPedido.aspx" />
+    <Content Include="Facturacion\FacturacionSegmentos.aspx" />
+    <Content Include="Facturacion\FacturaDirecta.aspx" />
+    <Content Include="Facturacion\FacturaExportacion.aspx" />
+    <Content Include="Facturacion\Garantias.aspx" />
+    <Content Include="Facturacion\Gastos.aspx" />
+    <Content Include="Facturacion\Notas.aspx" />
+    <Content Include="Facturacion\NotasDebito.aspx" />
+    <Content Include="Facturacion\Remisiones.aspx" />
+    <Content Include="Facturacion\RemisionSegmento.aspx" />
+    <Content Include="Facturacion\Separados.aspx" />
+    <Content Include="Gestion\CargueGestion.aspx" />
+    <Content Include="Gestion\Gestion.aspx" />
+    <Content Include="Inventarios\CargueInventarios.aspx" />
+    <Content Include="Inventarios\ConfirmarTrasladosMasivo.aspx" />
+    <Content Include="Inventarios\FotoInventario.aspx" />
+    <Content Include="Inventarios\ImpresionRotulos.aspx" />
+    <Content Include="Inventarios\MovimientosManuales.aspx" />
+    <Content Include="Inventarios\TransformacionTester.aspx" />
+    <Content Include="Inventarios\Traslados.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LtaEmpaque\LtaEmpaque.aspx" />
+    <Content Include="Nomina\LiquidacionNomina.aspx" />
+    <Content Include="Nomina\NovedadesNomina.aspx" />
+    <Content Include="Nomina\PeriodosNomina.aspx" />
+    <Content Include="Nomina\PlanillaConceptos.aspx" />
+    <Content Include="Parametros\ClasesParametros.aspx" />
+    <Content Include="Parametros\ClavesAlternas.aspx" />
+    <Content Include="Parametros\InterfacesCargue.aspx" />
+    <Content Include="Parametros\LstPrecios.aspx" />
+    <Content Include="Parametros\MaestroBancos.aspx" />
+    <Content Include="Parametros\MaestroBodegas.aspx" />
+    <Content Include="Parametros\PoliticasComerciales.aspx" />
+    <Content Include="Parametros\ReportesFormularios.aspx" />
+    <Content Include="Parametros\TasaCambio.aspx" />
+    <Content Include="Parametros\TipoFactura.aspx" />
+    <Content Include="Parametros\TipoProductos.aspx" />
+    <Content Include="Parametros\TiposMvtos.aspx" />
+    <Content Include="Parametros\TiposPedido.aspx" />
+    <Content Include="Pedidos\Pedidos.aspx" />
+    <Content Include="Presupuesto\PresupuestoVendedor.aspx" />
+    <Content Include="Recaudo\CarteraxCliente.aspx" />
+    <Content Include="Recaudo\CarteraxEdad.aspx" />
+    <Content Include="Recaudo\ConsultaRecaudos.aspx" />
+    <Content Include="Recaudo\Recaudo.aspx" />
+    <Content Include="Reportes\Default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="App_Themes\Tema2\Images\AddRecord.gif" />
+    <Content Include="App_Themes\Tema2\Images\aiwrap.png" />
+    <Content Include="App_Themes\Tema2\Images\bglogin.jpg" />
+    <Content Include="App_Themes\Tema2\Images\Cancel.gif" />
+    <Content Include="App_Themes\Tema2\Images\Delete.gif" />
+    <Content Include="App_Themes\Tema2\Images\Edit.gif" />
+    <Content Include="App_Themes\Tema2\Images\img01.gif" />
+    <Content Include="App_Themes\Tema2\Images\img02.jpg" />
+    <Content Include="App_Themes\Tema2\Images\img03.gif" />
+    <Content Include="App_Themes\Tema2\Images\img04.gif" />
+    <Content Include="App_Themes\Tema2\Images\img05.gif" />
+    <Content Include="App_Themes\Tema2\Images\img06.gif" />
+    <Content Include="App_Themes\Tema2\Images\img07.gif" />
+    <Content Include="App_Themes\Tema2\Images\Update.gif" />
+    <Content Include="App_Themes\Tema2\resources\images\background.png" />
+    <Content Include="App_Themes\Tema2\resources\images\button.png" />
+    <Content Include="App_Themes\Tema2\resources\images\button_browse.png" />
+    <Content Include="App_Themes\Tema2\resources\images\button_browse_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\button_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\calender_next.png" />
+    <Content Include="App_Themes\Tema2\resources\images\calender_prev.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\blue\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\brown\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\green\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\greyblue\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\purple\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\button_highlight.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\button_highlight_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\button_home.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\header_inner.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\header_inner_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\login_corners.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\menu_arrow.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\menu_border.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\menu_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\menu_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\menu_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\quick_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\quick_l_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\quick_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\quick_r_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\title.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\title_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\colors\red\title_tab_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\content.png" />
+    <Content Include="App_Themes\Tema2\resources\images\content_alternate.png" />
+    <Content Include="App_Themes\Tema2\resources\images\content_fixed.png" />
+    <Content Include="App_Themes\Tema2\resources\images\content_left_top.png" />
+    <Content Include="App_Themes\Tema2\resources\images\header_background.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\application_double.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\calendar.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\cog.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\cross.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\error.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\exclamation.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\house.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\notice.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\page_white_copy.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\success.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\tick.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\warning.png" />
+    <Content Include="App_Themes\Tema2\resources\images\icons\world_link.png" />
+    <Content Include="App_Themes\Tema2\resources\images\login.png" />
+    <Content Include="App_Themes\Tema2\resources\images\logo.png" />
+    <Content Include="App_Themes\Tema2\resources\images\menu.png" />
+    <Content Include="App_Themes\Tema2\resources\images\menu_l.png" />
+    <Content Include="App_Themes\Tema2\resources\images\menu_minus.png" />
+    <Content Include="App_Themes\Tema2\resources\images\menu_plus.png" />
+    <Content Include="App_Themes\Tema2\resources\images\menu_r.png" />
+    <Content Include="App_Themes\Tema2\resources\images\minus.png" />
+    <Content Include="App_Themes\Tema2\resources\images\misc\biscuits.jpg" />
+    <Content Include="App_Themes\Tema2\resources\images\misc\ginger.jpg" />
+    <Content Include="App_Themes\Tema2\resources\images\overlay.png" />
+    <Content Include="App_Themes\Tema2\resources\images\pager.png" />
+    <Content Include="App_Themes\Tema2\resources\images\pager_selected.png" />
+    <Content Include="App_Themes\Tema2\resources\images\plus.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\calendar.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-icons_228ef1_256x240.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-icons_ef8c08_256x240.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-icons_ffd27a_256x240.png" />
+    <Content Include="App_Themes\Tema2\resources\images\ui\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\Tema2\resources\scripts\excanvas.min.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery-1.4.2.min.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery-ui-1.8.custom.min.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery.flot.min.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\jquery.ui.selectmenu.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.autocomplete.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.chart.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.dialog.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.form.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.menu.js" />
+    <Content Include="App_Themes\Tema2\resources\scripts\smooth.table.js" />
+    <Content Include="Reportes\Visor.aspx" />
+    <Content Include="Reportes\VisorPantallaCompleta.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Tareas\AtencionCliente.aspx" />
+    <Content Include="Tareas\Default.aspx" />
+    <Content Include="Tareas\LstTareas.aspx" />
+    <Content Include="Tareas\Polla.aspx" />
+    <Content Include="Tareas\QuejasApelaciones.aspx" />
+    <Content Include="Tareas\Scheduler.aspx" />
+    <Content Include="Terceros\Default.aspx" />
+    <Content Include="Terceros\InventarioEquipos.aspx" />
+    <Content Include="Terceros\MaestroArticulos.aspx" />
+    <Content Include="Terceros\RegistroClientes.aspx" />
+    <Content Include="Terceros\Terceros.aspx" />
+    <Content Include="ViwerPdf.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="webcam.aspx" />
+    <Content Include="Webcam_Plugin\jquery.webcam.js" />
+    <Content Include="Webcam_Plugin\jscam.swf" />
+    <Content Include="Webcam_Plugin\jscam_canvas_only.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CrearFormularios.aspx.cs">
+      <DependentUpon>CrearFormularios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CrearFormularios.aspx.designer.cs">
+      <DependentUpon>CrearFormularios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CrearModulo.aspx.cs">
+      <DependentUpon>CrearModulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CrearModulo.aspx.designer.cs">
+      <DependentUpon>CrearModulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CrearOpcion.aspx.cs">
+      <DependentUpon>CrearOpcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CrearOpcion.aspx.designer.cs">
+      <DependentUpon>CrearOpcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CrearSistema.aspx.cs">
+      <DependentUpon>CrearSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CrearSistema.aspx.designer.cs">
+      <DependentUpon>CrearSistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\CtrlCalidad.aspx.cs">
+      <DependentUpon>CtrlCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\CtrlCalidad.aspx.designer.cs">
+      <DependentUpon>CtrlCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\AprobacionOC.aspx.cs">
+      <DependentUpon>AprobacionOC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\AprobacionOC.aspx.designer.cs">
+      <DependentUpon>AprobacionOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CambioCantidadesOC.aspx.cs">
+      <DependentUpon>CambioCantidadesOC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\CambioCantidadesOC.aspx.designer.cs">
+      <DependentUpon>CambioCantidadesOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\ConsultaCuentasxPagar.aspx.cs">
+      <DependentUpon>ConsultaCuentasxPagar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\ConsultaCuentasxPagar.aspx.designer.cs">
+      <DependentUpon>ConsultaCuentasxPagar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CuentasxPagar.aspx.cs">
+      <DependentUpon>CuentasxPagar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\CuentasxPagar.aspx.designer.cs">
+      <DependentUpon>CuentasxPagar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\LogisticaIn.aspx.cs">
+      <DependentUpon>LogisticaIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\LogisticaIn.aspx.designer.cs">
+      <DependentUpon>LogisticaIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\LogisticaOut.aspx.cs">
+      <DependentUpon>LogisticaOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\LogisticaOut.aspx.designer.cs">
+      <DependentUpon>LogisticaOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\OrdenesCompras.aspx.cs">
+      <DependentUpon>OrdenesCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\OrdenesCompras.aspx.designer.cs">
+      <DependentUpon>OrdenesCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\ProntaModa.aspx.cs">
+      <DependentUpon>ProntaModa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\ProntaModa.aspx.designer.cs">
+      <DependentUpon>ProntaModa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\RecepcionCompras.aspx.cs">
+      <DependentUpon>RecepcionCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\RecepcionCompras.aspx.designer.cs">
+      <DependentUpon>RecepcionCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SegregacionFacturas.aspx.cs">
+      <DependentUpon>SegregacionFacturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\SegregacionFacturas.aspx.designer.cs">
+      <DependentUpon>SegregacionFacturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SegregacionV2.aspx.cs">
+      <DependentUpon>SegregacionV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\SegregacionV2.aspx.designer.cs">
+      <DependentUpon>SegregacionV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConDescuentosArticulos.aspx.cs">
+      <DependentUpon>ConDescuentosArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConDescuentosArticulos.aspx.designer.cs">
+      <DependentUpon>ConDescuentosArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaBonos.aspx.cs">
+      <DependentUpon>ConsultaBonos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaBonos.aspx.designer.cs">
+      <DependentUpon>ConsultaBonos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientos.aspx.cs">
+      <DependentUpon>ConsultaMovimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientos.aspx.designer.cs">
+      <DependentUpon>ConsultaMovimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaPagos.aspx.cs">
+      <DependentUpon>ConsultaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaPagos.aspx.designer.cs">
+      <DependentUpon>ConsultaPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultasFacturas.aspx.cs">
+      <DependentUpon>ConsultasFacturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultasFacturas.aspx.designer.cs">
+      <DependentUpon>ConsultasFacturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasCarteraVendedor.aspx.cs">
+      <DependentUpon>ConsultaVentasCarteraVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasCarteraVendedor.aspx.designer.cs">
+      <DependentUpon>ConsultaVentasCarteraVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasDetalle.aspx.cs">
+      <DependentUpon>ConsultaVentasDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasDetalle.aspx.designer.cs">
+      <DependentUpon>ConsultaVentasDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasG.aspx.cs">
+      <DependentUpon>ConsultaVentasG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVentasG.aspx.designer.cs">
+      <DependentUpon>ConsultaVentasG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CstInventarios.aspx.cs">
+      <DependentUpon>CstInventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CstInventarios.aspx.designer.cs">
+      <DependentUpon>CstInventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CtaVentas.aspx.cs">
+      <DependentUpon>CtaVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CtaVentas.aspx.designer.cs">
+      <DependentUpon>CtaVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cVentasVendedor.aspx.cs">
+      <DependentUpon>cVentasVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cVentasVendedor.aspx.designer.cs">
+      <DependentUpon>cVentasVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\DesmPersonal.aspx.cs">
+      <DependentUpon>DesmPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\DesmPersonal.aspx.designer.cs">
+      <DependentUpon>DesmPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\DesmPuntoVenta.aspx.cs">
+      <DependentUpon>DesmPuntoVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\DesmPuntoVenta.aspx.designer.cs">
+      <DependentUpon>DesmPuntoVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\DesmTotal.aspx.cs">
+      <DependentUpon>DesmTotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\DesmTotal.aspx.designer.cs">
+      <DependentUpon>DesmTotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\EstadoPedidosGantt.aspx.cs">
+      <DependentUpon>EstadoPedidosGantt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\EstadoPedidosGantt.aspx.designer.cs">
+      <DependentUpon>EstadoPedidosGantt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\HojaKardex.aspx.cs">
+      <DependentUpon>HojaKardex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\HojaKardex.aspx.designer.cs">
+      <DependentUpon>HojaKardex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\InventarioDisponible.aspx.cs">
+      <DependentUpon>InventarioDisponible.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\InventarioDisponible.aspx.designer.cs">
+      <DependentUpon>InventarioDisponible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ReposicionDiaria.aspx.cs">
+      <DependentUpon>ReposicionDiaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ReposicionDiaria.aspx.designer.cs">
+      <DependentUpon>ReposicionDiaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\SqlExplorer.aspx.cs">
+      <DependentUpon>SqlExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\SqlExplorer.aspx.designer.cs">
+      <DependentUpon>SqlExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\BalanceComprobacion.aspx.cs">
+      <DependentUpon>BalanceComprobacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\BalanceComprobacion.aspx.designer.cs">
+      <DependentUpon>BalanceComprobacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CausacionProveedores.aspx.cs">
+      <DependentUpon>CausacionProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CausacionProveedores.aspx.designer.cs">
+      <DependentUpon>CausacionProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CentroCostos.aspx.cs">
+      <DependentUpon>CentroCostos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CentroCostos.aspx.designer.cs">
+      <DependentUpon>CentroCostos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CierreContable.aspx.cs">
+      <DependentUpon>CierreContable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CierreContable.aspx.designer.cs">
+      <DependentUpon>CierreContable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\ComprobanteRetenciones.aspx.cs">
+      <DependentUpon>ComprobanteRetenciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\ComprobanteRetenciones.aspx.designer.cs">
+      <DependentUpon>ComprobanteRetenciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\ConciliacionBancos.aspx.cs">
+      <DependentUpon>ConciliacionBancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\ConciliacionBancos.aspx.designer.cs">
+      <DependentUpon>ConciliacionBancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\ConsultaMovimientos.aspx.cs">
+      <DependentUpon>ConsultaMovimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\ConsultaMovimientos.aspx.designer.cs">
+      <DependentUpon>ConsultaMovimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DiarioLegal.aspx.cs">
+      <DependentUpon>DiarioLegal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\DiarioLegal.aspx.designer.cs">
+      <DependentUpon>DiarioLegal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\MaestroDocumentos.aspx.cs">
+      <DependentUpon>MaestroDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\MaestroDocumentos.aspx.designer.cs">
+      <DependentUpon>MaestroDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\MayorAnalitico.aspx.cs">
+      <DependentUpon>MayorAnalitico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\MayorAnalitico.aspx.designer.cs">
+      <DependentUpon>MayorAnalitico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Meses.aspx.cs">
+      <DependentUpon>Meses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Meses.aspx.designer.cs">
+      <DependentUpon>Meses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\PlanillaCuentas.aspx.cs">
+      <DependentUpon>PlanillaCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\PlanillaCuentas.aspx.designer.cs">
+      <DependentUpon>PlanillaCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\PlanillaImpuestos.aspx.cs">
+      <DependentUpon>PlanillaImpuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\PlanillaImpuestos.aspx.designer.cs">
+      <DependentUpon>PlanillaImpuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ConsultaInv.ascx.cs">
+      <DependentUpon>ConsultaInv.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ConsultaInv.ascx.designer.cs">
+      <DependentUpon>ConsultaInv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_Articulos.ascx.cs">
+      <DependentUpon>Ctl_Articulos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_Articulos.ascx.designer.cs">
+      <DependentUpon>Ctl_Articulos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_BodegaFecha.ascx.cs">
+      <DependentUpon>Ctl_BodegaFecha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_BodegaFecha.ascx.designer.cs">
+      <DependentUpon>Ctl_BodegaFecha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_Personas.ascx.cs">
+      <DependentUpon>Ctl_Personas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\Ctl_Personas.ascx.designer.cs">
+      <DependentUpon>Ctl_Personas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctrl_gesArticulosHor.ascx.cs">
+      <DependentUpon>ctrl_gesArticulosHor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctrl_gesArticulosHor.ascx.designer.cs">
+      <DependentUpon>ctrl_gesArticulosHor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\LoadFileBinary.ascx.cs">
+      <DependentUpon>LoadFileBinary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\LoadFileBinary.ascx.designer.cs">
+      <DependentUpon>LoadFileBinary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\UserControlAdvancedDropDownList.ascx.cs">
+      <DependentUpon>UserControlAdvancedDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\UserControlAdvancedDropDownList.ascx.designer.cs">
+      <DependentUpon>UserControlAdvancedDropDownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\UserControlAdvancedDropDownListText.ascx.cs">
+      <DependentUpon>UserControlAdvancedDropDownListText.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\UserControlAdvancedDropDownListText.ascx.designer.cs">
+      <DependentUpon>UserControlAdvancedDropDownListText.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Correspondencia\CorrespondenciaIn.aspx.cs">
+      <DependentUpon>CorrespondenciaIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correspondencia\CorrespondenciaIn.aspx.designer.cs">
+      <DependentUpon>CorrespondenciaIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correspondencia\CorrespondenciaOut.aspx.cs">
+      <DependentUpon>CorrespondenciaOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correspondencia\CorrespondenciaOut.aspx.designer.cs">
+      <DependentUpon>CorrespondenciaOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correspondencia\PlanillaDesmontes.aspx.cs">
+      <DependentUpon>PlanillaDesmontes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correspondencia\PlanillaDesmontes.aspx.designer.cs">
+      <DependentUpon>PlanillaDesmontes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\CargarCostos.aspx.cs">
+      <DependentUpon>CargarCostos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\CargarCostos.aspx.designer.cs">
+      <DependentUpon>CargarCostos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\Costos.aspx.cs">
+      <DependentUpon>Costos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\Costos.aspx.designer.cs">
+      <DependentUpon>Costos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\DecuentoCedula.aspx.cs">
+      <DependentUpon>DecuentoCedula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\DecuentoCedula.aspx.designer.cs">
+      <DependentUpon>DecuentoCedula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CtaUsuariosRegistrados.aspx.cs">
+      <DependentUpon>CtaUsuariosRegistrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CtaUsuariosRegistrados.aspx.designer.cs">
+      <DependentUpon>CtaUsuariosRegistrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\Descuentos.aspx.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\Descuentos.aspx.designer.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\LiquidarCostos.aspx.cs">
+      <DependentUpon>LiquidarCostos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\LiquidarCostos.aspx.designer.cs">
+      <DependentUpon>LiquidarCostos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\Obsequios.aspx.cs">
+      <DependentUpon>Obsequios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\Obsequios.aspx.designer.cs">
+      <DependentUpon>Obsequios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costos\Presupuesto.aspx.cs">
+      <DependentUpon>Presupuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costos\Presupuesto.aspx.designer.cs">
+      <DependentUpon>Presupuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Bonos.aspx.cs">
+      <DependentUpon>Bonos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Bonos.aspx.designer.cs">
+      <DependentUpon>Bonos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CierreCaja.aspx.cs">
+      <DependentUpon>CierreCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CierreCaja.aspx.designer.cs">
+      <DependentUpon>CierreCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Devoluciones.aspx.cs">
+      <DependentUpon>Devoluciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Devoluciones.aspx.designer.cs">
+      <DependentUpon>Devoluciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\EmpaquePedido.aspx.cs">
+      <DependentUpon>EmpaquePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\EmpaquePedido.aspx.designer.cs">
+      <DependentUpon>EmpaquePedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionPedido.aspx.cs">
+      <DependentUpon>FacturacionPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionPedido.aspx.designer.cs">
+      <DependentUpon>FacturacionPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionSegmentos.aspx.cs">
+      <DependentUpon>FacturacionSegmentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionSegmentos.aspx.designer.cs">
+      <DependentUpon>FacturacionSegmentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturaDirecta.aspx.cs">
+      <DependentUpon>FacturaDirecta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturaDirecta.aspx.designer.cs">
+      <DependentUpon>FacturaDirecta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturaExportacion.aspx.cs">
+      <DependentUpon>FacturaExportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturaExportacion.aspx.designer.cs">
+      <DependentUpon>FacturaExportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Garantias.aspx.cs">
+      <DependentUpon>Garantias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Garantias.aspx.designer.cs">
+      <DependentUpon>Garantias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Gastos.aspx.cs">
+      <DependentUpon>Gastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Gastos.aspx.designer.cs">
+      <DependentUpon>Gastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Notas.aspx.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Notas.aspx.designer.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\NotasDebito.aspx.cs">
+      <DependentUpon>NotasDebito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\NotasDebito.aspx.designer.cs">
+      <DependentUpon>NotasDebito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Remisiones.aspx.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Remisiones.aspx.designer.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\RemisionSegmento.aspx.cs">
+      <DependentUpon>RemisionSegmento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\RemisionSegmento.aspx.designer.cs">
+      <DependentUpon>RemisionSegmento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Separados.aspx.cs">
+      <DependentUpon>Separados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Separados.aspx.designer.cs">
+      <DependentUpon>Separados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\CargueGestion.aspx.cs">
+      <DependentUpon>CargueGestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\CargueGestion.aspx.designer.cs">
+      <DependentUpon>CargueGestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\Gestion.aspx.cs">
+      <DependentUpon>Gestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\Gestion.aspx.designer.cs">
+      <DependentUpon>Gestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\CargueInventarios.aspx.cs">
+      <DependentUpon>CargueInventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\CargueInventarios.aspx.designer.cs">
+      <DependentUpon>CargueInventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\ConfirmarTrasladosMasivo.aspx.cs">
+      <DependentUpon>ConfirmarTrasladosMasivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\ConfirmarTrasladosMasivo.aspx.designer.cs">
+      <DependentUpon>ConfirmarTrasladosMasivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\FotoInventario.aspx.cs">
+      <DependentUpon>FotoInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\FotoInventario.aspx.designer.cs">
+      <DependentUpon>FotoInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\ImpresionRotulos.aspx.cs">
+      <DependentUpon>ImpresionRotulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\ImpresionRotulos.aspx.designer.cs">
+      <DependentUpon>ImpresionRotulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\MovimientosManuales.aspx.cs">
+      <DependentUpon>MovimientosManuales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\MovimientosManuales.aspx.designer.cs">
+      <DependentUpon>MovimientosManuales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\TransformacionTester.aspx.cs">
+      <DependentUpon>TransformacionTester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\TransformacionTester.aspx.designer.cs">
+      <DependentUpon>TransformacionTester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Traslados.aspx.cs">
+      <DependentUpon>Traslados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Traslados.aspx.designer.cs">
+      <DependentUpon>Traslados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LtaEmpaque\LtaEmpaque.aspx.cs">
+      <DependentUpon>LtaEmpaque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LtaEmpaque\LtaEmpaque.aspx.designer.cs">
+      <DependentUpon>LtaEmpaque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MasterAdmin.Master.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MasterAdmin.Master.designer.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina\LiquidacionNomina.aspx.cs">
+      <DependentUpon>LiquidacionNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina\LiquidacionNomina.aspx.designer.cs">
+      <DependentUpon>LiquidacionNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina\NovedadesNomina.aspx.cs">
+      <DependentUpon>NovedadesNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina\NovedadesNomina.aspx.designer.cs">
+      <DependentUpon>NovedadesNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina\PeriodosNomina.aspx.cs">
+      <DependentUpon>PeriodosNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina\PeriodosNomina.aspx.designer.cs">
+      <DependentUpon>PeriodosNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina\PlanillaConceptos.aspx.cs">
+      <DependentUpon>PlanillaConceptos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina\PlanillaConceptos.aspx.designer.cs">
+      <DependentUpon>PlanillaConceptos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\ClasesParametros.aspx.cs">
+      <DependentUpon>ClasesParametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\ClasesParametros.aspx.designer.cs">
+      <DependentUpon>ClasesParametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\ClavesAlternas.aspx.cs">
+      <DependentUpon>ClavesAlternas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\ClavesAlternas.aspx.designer.cs">
+      <DependentUpon>ClavesAlternas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\InterfacesCargue.aspx.cs">
+      <DependentUpon>InterfacesCargue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\InterfacesCargue.aspx.designer.cs">
+      <DependentUpon>InterfacesCargue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\LstPrecios.aspx.cs">
+      <DependentUpon>LstPrecios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\LstPrecios.aspx.designer.cs">
+      <DependentUpon>LstPrecios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\MaestroBancos.aspx.cs">
+      <DependentUpon>MaestroBancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\MaestroBancos.aspx.designer.cs">
+      <DependentUpon>MaestroBancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\MaestroBodegas.aspx.cs">
+      <DependentUpon>MaestroBodegas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\MaestroBodegas.aspx.designer.cs">
+      <DependentUpon>MaestroBodegas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\PoliticasComerciales.aspx.cs">
+      <DependentUpon>PoliticasComerciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\PoliticasComerciales.aspx.designer.cs">
+      <DependentUpon>PoliticasComerciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\ReportesFormularios.aspx.cs">
+      <DependentUpon>ReportesFormularios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\ReportesFormularios.aspx.designer.cs">
+      <DependentUpon>ReportesFormularios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\TasaCambio.aspx.cs">
+      <DependentUpon>TasaCambio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\TasaCambio.aspx.designer.cs">
+      <DependentUpon>TasaCambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\TipoFactura.aspx.cs">
+      <DependentUpon>TipoFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\TipoFactura.aspx.designer.cs">
+      <DependentUpon>TipoFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\TipoProductos.aspx.cs">
+      <DependentUpon>TipoProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\TipoProductos.aspx.designer.cs">
+      <DependentUpon>TipoProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\TiposMvtos.aspx.cs">
+      <DependentUpon>TiposMvtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\TiposMvtos.aspx.designer.cs">
+      <DependentUpon>TiposMvtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\TiposPedido.aspx.cs">
+      <DependentUpon>TiposPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parametros\TiposPedido.aspx.designer.cs">
+      <DependentUpon>TiposPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presupuesto\PresupuestoVendedor.aspx.cs">
+      <DependentUpon>PresupuestoVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presupuesto\PresupuestoVendedor.aspx.designer.cs">
+      <DependentUpon>PresupuestoVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recaudo\CarteraxCliente.aspx.cs">
+      <DependentUpon>CarteraxCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recaudo\CarteraxCliente.aspx.designer.cs">
+      <DependentUpon>CarteraxCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudo\CarteraxEdad.aspx.cs">
+      <DependentUpon>CarteraxEdad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recaudo\CarteraxEdad.aspx.designer.cs">
+      <DependentUpon>CarteraxEdad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudo\ConsultaRecaudos.aspx.cs">
+      <DependentUpon>ConsultaRecaudos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recaudo\ConsultaRecaudos.aspx.designer.cs">
+      <DependentUpon>ConsultaRecaudos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudo\Recaudo.aspx.cs">
+      <DependentUpon>Recaudo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recaudo\Recaudo.aspx.designer.cs">
+      <DependentUpon>Recaudo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Visor.aspx.cs">
+      <DependentUpon>Visor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Visor.aspx.designer.cs">
+      <DependentUpon>Visor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VisorPantallaCompleta.aspx.cs">
+      <DependentUpon>VisorPantallaCompleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VisorPantallaCompleta.aspx.designer.cs">
+      <DependentUpon>VisorPantallaCompleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\AtencionCliente.aspx.cs">
+      <DependentUpon>AtencionCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas\AtencionCliente.aspx.designer.cs">
+      <DependentUpon>AtencionCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\LstTareas.aspx.cs">
+      <DependentUpon>LstTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas\LstTareas.aspx.designer.cs">
+      <DependentUpon>LstTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\Polla.aspx.cs">
+      <DependentUpon>Polla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas\Polla.aspx.designer.cs">
+      <DependentUpon>Polla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\QuejasApelaciones.aspx.cs">
+      <DependentUpon>QuejasApelaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas\QuejasApelaciones.aspx.designer.cs">
+      <DependentUpon>QuejasApelaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\Scheduler.aspx.cs">
+      <DependentUpon>Scheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas\Scheduler.aspx.designer.cs">
+      <DependentUpon>Scheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terceros\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terceros\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terceros\InventarioEquipos.aspx.cs">
+      <DependentUpon>InventarioEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terceros\InventarioEquipos.aspx.designer.cs">
+      <DependentUpon>InventarioEquipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terceros\MaestroArticulos.aspx.cs">
+      <DependentUpon>MaestroArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terceros\MaestroArticulos.aspx.designer.cs">
+      <DependentUpon>MaestroArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terceros\RegistroClientes.aspx.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terceros\RegistroClientes.aspx.designer.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terceros\Terceros.aspx.cs">
+      <DependentUpon>Terceros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terceros\Terceros.aspx.designer.cs">
+      <DependentUpon>Terceros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViwerPdf.aspx.cs">
+      <DependentUpon>ViwerPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViwerPdf.aspx.designer.cs">
+      <DependentUpon>ViwerPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webcam.aspx.cs">
+      <DependentUpon>webcam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webcam.aspx.designer.cs">
+      <DependentUpon>webcam.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advhr\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advhr\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advhr\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advimage\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advimage\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advimage\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advimage\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advlink\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advlink\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advlink\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\advlist\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\autoresize\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\autosave\images\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\autosave\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\bbcode\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\contextmenu\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\directionality\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\emotions\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\emotions\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\emotions\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\example\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\example\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\example\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\fullpage\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\fullpage\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\fullpage\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\fullscreen\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\iespell\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\insertdatetime\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\layer\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\legacyoutput\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\media\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\media\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\media\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\media\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\nonbreaking\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\noneditable\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\pagebreak\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\pagebreak\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\paste\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\paste\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\preview\jscripts\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\print\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\save\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\searchreplace\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\searchreplace\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\searchreplace\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\spellchecker\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\spellchecker\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\spellchecker\includes\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\style\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\style\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\style\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\tabfocus\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\table\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\table\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\table\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\template\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\template\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\template\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\visualchars\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\wordcount\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\xhtmlxtras\css\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\xhtmlxtras\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\plugins\xhtmlxtras\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\advanced\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\advanced\js\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\advanced\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\advanced\skins\default\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\advanced\skins\o2k7\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\simple\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\simple\langs\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\simple\skins\default\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\themes\simple\skins\o2k7\img\" />
+    <Folder Include="App_Themes\Tema2\resources\scripts\tiny_mce\utils\" />
+    <Folder Include="Informes\" />
+    <Folder Include="pruebas\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XUSS.BLL\XUSS.BLL.csproj">
+      <Project>{AE27F2ED-9D5E-4311-98FC-E776034A5855}</Project>
+      <Name>XUSS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XUSS.DAL\XUSS.DAL.csproj">
+      <Project>{9F3D1E45-B307-4B0D-A31D-61DED7F94D5A}</Project>
+      <Name>XUSS.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\MasterAdmin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Tema2\SkinUC.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\compress.browser">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="App_Themes\TemaLogin\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="App_Themes\TemaLogin\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="App_Themes\TemaLogin\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\Perfil1.pubxml" />
+    <None Include="Properties\PublishProfiles\Perfil2.pubxml" />
+    <None Include="Properties\PublishProfiles\Perfil3.pubxml" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52699</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/XUSS.WEB</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\FACTURACION.SERVICIO.exe.config
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\FACTURACION.SERVICIO.exe
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\FACTURACION.SERVICIO.pdb
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Renci.SshNet.dll
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\bin\Debug\Renci.SshNet.xml
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\obj\Debug\FACTURACION.SERVICIO.csproj.AssemblyReference.cache
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\obj\Debug\FACTURACION.SERVICIO.csproj.CoreCompileInputs.cache
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\obj\Debug\FACTURACION.SERVICIO.csproj.CopyComplete
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\obj\Debug\FACTURACION.SERVICIO.exe
+C:\Fuentes\orion_web\trunk\solucion\FACTURACION.SERVICIO\obj\Debug\FACTURACION.SERVICIO.pdb

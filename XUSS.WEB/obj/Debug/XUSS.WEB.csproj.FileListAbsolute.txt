@@ -1,0 +1,180 @@
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\AjaxControlToolkit.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Web.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.Skins.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Framework.Mapping.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Bars.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Editor.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\itextsharp.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.xml
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.pdb
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csprojResolveAssemblyReference.cache
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.dll
+D:\Control de Versiones\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csprojResolveAssemblyReference.cache
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\AjaxControlToolkit.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Web.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.Skins.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Framework.Mapping.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Bars.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\FastReport.Editor.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\itextsharp.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.xml
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.pdb
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.dll
+G:\Mi unidad\Control de Versiones\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\AjaxControlToolkit.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.Skins.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Framework.Mapping.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\itextsharp.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.xml
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.pdb
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csprojResolveAssemblyReference.cache
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.dll
+E:\bkp vaio\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.dll.config
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.WEB.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\AjaxControlToolkit.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\CommonServiceLocator.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Ionic.Zip.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.ReportViewer.Common.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.Design.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.Spreadsheet.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.Skins.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Core.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Flow.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Spreadsheet.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Zip.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Abstractions.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Container.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Interception.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.ServiceLocation.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Framework.Mapping.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\EnvDTE.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Newtonsoft.Json.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\itextsharp.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\stdole.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.BLL.dll.config
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\XUSS.DAL.dll.config
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\CommonServiceLocator.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.DBSession.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.Spreadsheet.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Web.UI.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Core.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Flow.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Spreadsheet.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Telerik.Windows.Zip.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Abstractions.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Container.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.Interception.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Unity.ServiceLocation.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\VisorPdf.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Common.Utils.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Structure.Framework.Mapping.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\EnvDTE.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.pdb
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\bin\Microsoft.Practices.Unity.Interception.xml
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csproj.AssemblyReference.cache
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.dll.licenses
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csproj.CoreCompileInputs.cache
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.csproj.CopyComplete
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.dll
+C:\Fuentes\orion_web\trunk\solucion\XUSS.WEB\obj\Debug\XUSS.WEB.pdb

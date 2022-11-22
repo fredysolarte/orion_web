@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE27F2ED-9D5E-4311-98FC-E776034A5855}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XUSS.BLL</RootNamespace>
+    <AssemblyName>XUSS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Structure.Common.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\DBSession\bin\Debug\Structure.Common.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Structure.DBSession, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\DBSession\bin\Debug\Structure.DBSession.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q3 2014\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\AdmiArbolOpcionBL.cs" />
+    <Compile Include="Administracion\AdmiBlobBL.cs" />
+    <Compile Include="Administracion\AdmiClaseBL.cs" />
+    <Compile Include="Administracion\AdmiColumnaBL.cs" />
+    <Compile Include="Administracion\AdmiControlBL.cs" />
+    <Compile Include="Administracion\AdmiControlxrolBL.cs" />
+    <Compile Include="Administracion\AdmiFiltroBL.cs" />
+    <Compile Include="Administracion\AdmiFormularioBL.cs" />
+    <Compile Include="Administracion\AdmiModuloBL.cs" />
+    <Compile Include="Administracion\AdmiModuloxrolBL.cs" />
+    <Compile Include="Administracion\AdmiOpcionBL.cs" />
+    <Compile Include="Administracion\AdmiOpcionxrolBL.cs" />
+    <Compile Include="Administracion\AdmiParametroBL.cs" />
+    <Compile Include="Administracion\AdmiRestringeControlBL.cs" />
+    <Compile Include="Administracion\AdmiRestringeModuloBL.cs" />
+    <Compile Include="Administracion\AdmiRestringeOpcionBL.cs" />
+    <Compile Include="Administracion\AdmiRolBL.cs" />
+    <Compile Include="Administracion\AdmiRolxUsuarioBL.cs" />
+    <Compile Include="Administracion\AdmiSistemaBL.cs" />
+    <Compile Include="Administracion\AdmiTipoblobBL.cs" />
+    <Compile Include="Administracion\AdmiUsuarioBL.cs" />
+    <Compile Include="Administracion\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\PersonasBL.cs" />
+    <Compile Include="AdminUser\UsuariosBL.cs" />
+    <Compile Include="Articulos\ArticulosBL.cs" />
+    <Compile Include="Basicas\BasicasBL.cs" />
+    <Compile Include="Calidad\CtrlCalidadBL.cs" />
+    <Compile Include="Compras\OrdenesComprasBL.cs" />
+    <Compile Include="Compras\ProntaModaBL.cs" />
+    <Compile Include="Comun\ComunBL.cs" />
+    <Compile Include="Comun\VisorBL.cs" />
+    <Compile Include="Consultas\ConDescuentosArticulosBL.cs" />
+    <Compile Include="Consultas\ConsultasFacturasBL.cs" />
+    <Compile Include="Consultas\ConsultaVentasGBL.cs" />
+    <Compile Include="Consultas\CstInventariosBL.cs" />
+    <Compile Include="Consultas\CtaVentasBL.cs" />
+    <Compile Include="Consultas\cVentasVendedorBL.cs" />
+    <Compile Include="Consultas\DesmPuntoVentaBL.cs" />
+    <Compile Include="Consultas\ReposicionDiariaBL.cs" />
+    <Compile Include="Consultas\SqlExplorerBL.cs" />
+    <Compile Include="Contabilidad\CausacionProveedoresBL.CS" />
+    <Compile Include="Contabilidad\CentroCostosBL.cs" />
+    <Compile Include="Contabilidad\MaestroDocumentosBL.cs" />
+    <Compile Include="Contabilidad\MaestroTercerosBL.cs" />
+    <Compile Include="Contabilidad\PlanillaBL.cs" />
+    <Compile Include="Contabilidad\TercerosContabilidadBL.cs" />
+    <Compile Include="Costos\CargarCostosBL.cs" />
+    <Compile Include="Costos\CostosBL.cs" />
+    <Compile Include="Costos\DecuentoCedulaBL.cs" />
+    <Compile Include="Costos\DescuentoBL.cs" />
+    <Compile Include="Costos\ObsequiosBL.cs" />
+    <Compile Include="Costos\PresupuestoBL.cs" />
+    <Compile Include="CtDescuentos\CtaUsuariosRegistradosBL.cs" />
+    <Compile Include="DescuentosBL.cs" />
+    <Compile Include="Facturacion\FacturacionBL.cs" />
+    <Compile Include="Facturacion\GarantiasBL.cs" />
+    <Compile Include="Facturacion\NotasBL.cs" />
+    <Compile Include="Inventarios\FotoInventarioBL.cs" />
+    <Compile Include="Inventarios\ImpresionRotulosBL.cs" />
+    <Compile Include="Inventarios\MovimientosBL.cs" />
+    <Compile Include="Inventarios\MovimientosManualesBL.cs" />
+    <Compile Include="Inventarios\TrasladosBL.cs" />
+    <Compile Include="ListaPrecios\ListaPreciosBL.cs" />
+    <Compile Include="Mail\UMail.cs" />
+    <Compile Include="Parametros\BodegaBL.cs" />
+    <Compile Include="Parametros\ClavesAlternasBL.cs" />
+    <Compile Include="Parametros\EstadosBL.cs" />
+    <Compile Include="Parametros\ParametrosBL.cs" />
+    <Compile Include="Parametros\PoliticasComercialesBL.cs" />
+    <Compile Include="Parametros\TipoFacturaBL.cs" />
+    <Compile Include="Parametros\TipoMovimientoBL.cs" />
+    <Compile Include="Parametros\TipoProductosBL.cs" />
+    <Compile Include="Parametros\TPedidoBL.cs" />
+    <Compile Include="Pedidos\LtaEmpaqueBL.cs" />
+    <Compile Include="Pedidos\PedidosBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Consultas\ConsultasBL.cs" />
+    <Compile Include="Recaudo\RecaudoBL.cs" />
+    <Compile Include="Reportes\VisorBL.cs" />
+    <Compile Include="Tareas\LstTareasBL.cs" />
+    <Compile Include="Tareas\PollaBL.cs" />
+    <Compile Include="Terceros\InventarioEquiposBL.cs" />
+    <Compile Include="Terceros\TercerosBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XUSS.DAL\XUSS.DAL.csproj">
+      <Project>{9F3D1E45-B307-4B0D-A31D-61DED7F94D5A}</Project>
+      <Name>XUSS.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Informes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bootstrap-theme.css.map" />
+    <None Include="Content\bootstrap-theme.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

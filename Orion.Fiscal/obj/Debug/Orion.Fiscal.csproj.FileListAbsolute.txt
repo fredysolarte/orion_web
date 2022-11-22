@@ -1,0 +1,10 @@
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\bin\Debug\Orion.Fiscal.exe.config
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\bin\Debug\Orion.Fiscal.exe
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\bin\Debug\Orion.Fiscal.pdb
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.csproj.AssemblyReference.cache
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.frm_principal.resources
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.Properties.Resources.resources
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.csproj.GenerateResource.cache
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.csproj.CoreCompileInputs.cache
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.exe
+C:\Fuentes\orion_web\trunk\solucion\Orion.Fiscal\obj\Debug\Orion.Fiscal.pdb

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F3D1E45-B307-4B0D-A31D-61DED7F94D5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XUSS.DAL</RootNamespace>
+    <AssemblyName>XUSS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Structure.DBSession, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\DBSession\bin\Debug\Structure.DBSession.dll</HintPath>
+    </Reference>
+    <Reference Include="Structure.Framework.Mapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\orion_fw\trunk\FW Structure\Structure\DBSession\bin\Debug\Structure.Framework.Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation">
+      <HintPath>..\packages\Unity.5.8.6\lib\net40\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\AdmiArbolOpcionDB.cs" />
+    <Compile Include="Administracion\AdmiBlobDB.cs" />
+    <Compile Include="Administracion\AdmiClaseDB.cs" />
+    <Compile Include="Administracion\AdmiColumnaDB.cs" />
+    <Compile Include="Administracion\AdmiControlDB.cs" />
+    <Compile Include="Administracion\AdmiControlxrolDB.cs" />
+    <Compile Include="Administracion\AdmiFiltroDB.cs" />
+    <Compile Include="Administracion\AdmiFormularioDB.cs" />
+    <Compile Include="Administracion\AdmiModuloDB.cs" />
+    <Compile Include="Administracion\AdmiModuloxrolDB.cs" />
+    <Compile Include="Administracion\AdmiOpcionDB.cs" />
+    <Compile Include="Administracion\AdmiOpcionxrolDB.cs" />
+    <Compile Include="Administracion\AdmiParametroDB.cs" />
+    <Compile Include="Administracion\AdmiRestringeControlDB.cs" />
+    <Compile Include="Administracion\AdmiRestringeModuloDB.cs" />
+    <Compile Include="Administracion\AdmiRestringeOpcionDB.cs" />
+    <Compile Include="Administracion\AdmiRolDB.cs" />
+    <Compile Include="Administracion\AdmiRolxUsuarioDB.cs" />
+    <Compile Include="Administracion\AdmiSistemaDB.cs" />
+    <Compile Include="Administracion\AdmiTipoblobDB.cs" />
+    <Compile Include="Administracion\AdmiUsuarioDB.cs" />
+    <Compile Include="Administracion\PersonasDB.cs" />
+    <Compile Include="AdminUser\UsuariosBD.cs" />
+    <Compile Include="Articulos\ArticulosBD.cs" />
+    <Compile Include="Basicas\BasicasBD.cs" />
+    <Compile Include="BE\Administracion\AdmiArbolOpcion.cs" />
+    <Compile Include="BE\Administracion\AdmiBlob.cs" />
+    <Compile Include="BE\Administracion\AdmiClase.cs" />
+    <Compile Include="BE\Administracion\AdmiColumna.cs" />
+    <Compile Include="BE\Administracion\AdmiControl.cs" />
+    <Compile Include="BE\Administracion\AdmiControlxrol.cs" />
+    <Compile Include="BE\Administracion\AdmiFiltro.cs" />
+    <Compile Include="BE\Administracion\AdmiFormulario.cs" />
+    <Compile Include="BE\Administracion\AdmiModulo.cs" />
+    <Compile Include="BE\Administracion\AdmiModuloxrol.cs" />
+    <Compile Include="BE\Administracion\AdmiOpcion.cs" />
+    <Compile Include="BE\Administracion\AdmiOpcionxrol.cs" />
+    <Compile Include="BE\Administracion\AdmiParametro.cs" />
+    <Compile Include="BE\Administracion\AdmiRestringeControl.cs" />
+    <Compile Include="BE\Administracion\AdmiRestringeModulo.cs" />
+    <Compile Include="BE\Administracion\AdmiRestringeOpcion.cs" />
+    <Compile Include="BE\Administracion\AdmiRol.cs" />
+    <Compile Include="BE\Administracion\AdmiRolxUsuario.cs" />
+    <Compile Include="BE\Administracion\AdmiSistema.cs" />
+    <Compile Include="BE\Administracion\AdmiTipoblob.cs" />
+    <Compile Include="BE\Administracion\AdmiUsuario.cs" />
+    <Compile Include="BE\Administracion\Personas.cs" />
+    <Compile Include="BE\CtrlCalidadUsr.cs" />
+    <Compile Include="Calidad\CtrlCalidadBD.cs" />
+    <Compile Include="Compras\BillofLadingBD.cs" />
+    <Compile Include="Compras\OrdenesComprasBD.cs" />
+    <Compile Include="Compras\ProntaModaBD.cs" />
+    <Compile Include="Compras\SegregacionBD.cs" />
+    <Compile Include="Comun\ComunBD.cs" />
+    <Compile Include="Comun\TBTABLAS.cs" />
+    <Compile Include="Consultas\ConDescuentosArticulosBD.cs" />
+    <Compile Include="Consultas\ConsultaBonosBD.cs" />
+    <Compile Include="Consultas\ConsultasBD.cs" />
+    <Compile Include="Consultas\ConsultasFacturasBD.cs" />
+    <Compile Include="Consultas\ConsultaVentasGBD.cs" />
+    <Compile Include="Consultas\CstInventariosBD.cs" />
+    <Compile Include="Consultas\CtaVentasBD.cs" />
+    <Compile Include="Consultas\cVentasVendedorBD.cs" />
+    <Compile Include="Consultas\DesmPuntoVentaBD.cs" />
+    <Compile Include="Consultas\ReposicionDiariaBD.cs" />
+    <Compile Include="Consultas\SqlExplorerBD.cs" />
+    <Compile Include="Contabilidad\CausacionProveedoresBD.cs" />
+    <Compile Include="Contabilidad\CentroCostosBD.cs" />
+    <Compile Include="Contabilidad\CierreBD.cs" />
+    <Compile Include="Contabilidad\MaestroDocumentosBD.cs" />
+    <Compile Include="Contabilidad\MaestroTecerosBD.cs" />
+    <Compile Include="Contabilidad\PlanillaBD.cs" />
+    <Compile Include="Contabilidad\PlanillaImpuestosBD.cs" />
+    <Compile Include="Contabilidad\TercerosContabilidadBD.cs" />
+    <Compile Include="Correspondencia\CorrespondenciaBD.cs" />
+    <Compile Include="Correspondencia\PlanillaDesmontesBD.cs" />
+    <Compile Include="Costos\CargarCostosBD.cs" />
+    <Compile Include="Costos\CostosBD.cs" />
+    <Compile Include="Costos\DecuentoCedulaBD.cs" />
+    <Compile Include="Costos\DescuentoBD.cs" />
+    <Compile Include="Costos\ObsequiosBD.cs" />
+    <Compile Include="Costos\PresupuestoBD.cs" />
+    <Compile Include="CtDescuentos\CtaUsuariosRegistradosBD.cs" />
+    <Compile Include="Descuentos\DescuentosBD.cs" />
+    <Compile Include="Facturacion\FacturacionBD.cs" />
+    <Compile Include="Facturacion\GarantiasBD.cs" />
+    <Compile Include="Facturacion\NotasBD.cs" />
+    <Compile Include="General\Campos.cs" />
+    <Compile Include="General\FormControls.cs" />
+    <Compile Include="Comun\VisorBD.cs" />
+    <Compile Include="Genericas\GenericaBD.cs" />
+    <Compile Include="Gestion\PreJuridicoBD.cs" />
+    <Compile Include="Inventarios\MovimientosBD.cs" />
+    <Compile Include="Inventarios\TransformacionBD.cs" />
+    <Compile Include="Inventarios\TrasladosBD.cs" />
+    <Compile Include="ListaPrecios\ListaPreciosBD.cs" />
+    <Compile Include="Nomina\LiquidacionNominaBD.cs" />
+    <Compile Include="Nomina\PeriodosNominaBD.cs" />
+    <Compile Include="Nomina\PlanillaConceptosNMBD.cs" />
+    <Compile Include="Parametros\BancoBD.cs" />
+    <Compile Include="Parametros\BodegaBD.cs" />
+    <Compile Include="Parametros\CarguePlanosBD.cs" />
+    <Compile Include="Parametros\ClavesAlternasBD.cs" />
+    <Compile Include="Parametros\CompaniaBD.cs" />
+    <Compile Include="Parametros\EstadosBD.cs" />
+    <Compile Include="Parametros\MesesBD.cs" />
+    <Compile Include="Parametros\ParametrosBD.cs" />
+    <Compile Include="Parametros\PoliticasComercialesBD.cs" />
+    <Compile Include="Parametros\QuejasApelacionesBD.cs" />
+    <Compile Include="Parametros\SoportesBD.cs" />
+    <Compile Include="Parametros\TasaCambioBD.cs" />
+    <Compile Include="Parametros\TipoFacturaBD.cs" />
+    <Compile Include="Parametros\TipoMovimientoBD.cs" />
+    <Compile Include="Parametros\TipoProductosBD.cs" />
+    <Compile Include="Parametros\TPedidoBD.cs" />
+    <Compile Include="Pedidos\LtaEmpaqueBD.cs" />
+    <Compile Include="Pedidos\PedidosBD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recaudo\recaudoBD.cs" />
+    <Compile Include="Reportes\VisorBD.cs" />
+    <Compile Include="Tareas\LstTareasBD.cs" />
+    <Compile Include="Tareas\PollaBD.cs" />
+    <Compile Include="Terceros\InventarioEquiposBD.cs" />
+    <Compile Include="Terceros\TercerosBD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Informes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Content\bootstrap-grid.css.map" />
+    <None Include="Content\bootstrap-grid.min.css.map" />
+    <None Include="Content\bootstrap-grid.rtl.css.map" />
+    <None Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <None Include="Content\bootstrap-reboot.css.map" />
+    <None Include="Content\bootstrap-reboot.min.css.map" />
+    <None Include="Content\bootstrap-reboot.rtl.css.map" />
+    <None Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="Content\bootstrap-utilities.css.map" />
+    <None Include="Content\bootstrap-utilities.min.css.map" />
+    <None Include="Content\bootstrap-utilities.rtl.css.map" />
+    <None Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="Content\bootstrap.rtl.css.map" />
+    <None Include="Content\bootstrap.rtl.min.css.map" />
+    <None Include="packages.config" />
+    <None Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\bootstrap.bundle.min.js.map" />
+    <None Include="Scripts\bootstrap.esm.js.map" />
+    <None Include="Scripts\bootstrap.esm.min.js.map" />
+    <None Include="Scripts\bootstrap.js.map" />
+    <None Include="Scripts\bootstrap.min.js.map" />
+    <None Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery-3.6.0.slim.min.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
