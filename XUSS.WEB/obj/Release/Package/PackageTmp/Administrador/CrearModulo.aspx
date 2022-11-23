@@ -185,6 +185,16 @@
                                     <tr>
                                         <td>
                                             <label>
+                                                App</label>
+                                        </td>
+                                        <td>
+                                            <asp:CheckBox ID="CheckBox1" runat="server" TextAlign="Left" Checked='<%# Eval("ModuApp") %>'
+                                                Enabled="False" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
                                                 Estado</label>
                                         </td>
                                         <td>
@@ -275,6 +285,15 @@
                                         </td>
                                         <td>
                                             <telerik:RadTextBox ID="txtOrden" runat="server" Width="358px" Text='<%# Bind("ModuOrden") %>' />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                App</label>
+                                        </td>
+                                        <td>
+                                            <asp:CheckBox ID="CheckBox2" runat="server" TextAlign="Left" Checked='<%# Bind("ModuApp") %>' />
                                         </td>
                                     </tr>
                                     <tr>
@@ -381,6 +400,15 @@
                                     <td>
                                         <telerik:RadNumericTextBox ID="txtOrden" runat="server" Width="358px" DataType="System.Int32?"
                                             DbValue='<%# Bind("ModuOrden") %>' NumberFormat-DecimalDigits="0" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            App</label>
+                                    </td>
+                                    <td>
+                                        <asp:CheckBox ID="CheckBox3" runat="server" TextAlign="Left" Checked='<%# Bind("ModuApp") %>' />
                                     </td>
                                 </tr>
                                 <tr>

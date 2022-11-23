@@ -21,7 +21,7 @@ namespace Orion.Fiscal
         [DllImport("pnpdll.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
         public static extern IntPtr PFabrepuerto(string puerto);*/
 
-        //[DllImport("pnpdll.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
+        //[DllImport(" pnpdlltest pnpdll.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
         [DllImport("pnpdll.dll")] public static extern string PFtotal();
         [DllImport("pnpdll.dll")] public static extern string PFrepz();
         [DllImport("pnpdll.dll")] public static extern string PFrepx();
@@ -57,6 +57,7 @@ namespace Orion.Fiscal
 
         private void btn_imprimir_Click(object sender, EventArgs e)
         {
+            double ln_total = 0;
             StringBuilder slog = new StringBuilder();
             try
             {
@@ -83,9 +84,20 @@ namespace Orion.Fiscal
                 {
                     slog.AppendLine(PFestatus("E"));
                     slog.AppendLine(PFrenglon(Convert.ToString(rw["ARNOMBRE"]), Convert.ToString(rw["DTCANTID"]), Convert.ToString(rw["DTPRECIO"]), "0000"));
+                    ln_total += Convert.ToDouble(rw["DTCANTID"]) * Convert.ToDouble(rw["DTPRECIO"]);
                 }
 
-                slog.AppendLine(PFtotal());
+                ln_total = Math.Round(ln_total, 0);
+                if (chk_igtf.Checked)
+                {
+                    slog.AppendLine(PFComando("E|U|" + Convert.ToString(ln_total)));
+                    //slog.AppendLine(PFComando("E|U"));
+                    //slog.AppendLine(PFtotal());
+                }
+                else
+                {
+                    slog.AppendLine(PFtotal());
+                }
 
                 rt_log.Text = slog.ToString();                                                
 

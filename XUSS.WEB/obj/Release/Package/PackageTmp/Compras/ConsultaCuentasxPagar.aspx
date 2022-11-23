@@ -25,7 +25,7 @@
         <fieldset class="cssFieldSetContainer">
             <div class="box">
                 <div class="title">
-                    <h5>Consulta Recaudos</h5>
+                    <h5>Consulta Cuentas por Pagar</h5>
                 </div>
             </div>
         </fieldset>

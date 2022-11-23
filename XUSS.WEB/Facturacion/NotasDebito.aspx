@@ -310,12 +310,21 @@
                                             </telerik:RadComboBox>
                                         </ItemTemplate>
                                     </telerik:GridTemplateColumn>
-                                    <telerik:GridBoundColumn DataField="DTNROFAC" HeaderButtonType="TextButton" HeaderStyle-Width="60px"
-                                        HeaderText="Nro Documento" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="DTNROFAC"
-                                        UniqueName="DTNROFAC">
-                                        <ItemStyle HorizontalAlign="Right" />
-                                    </telerik:GridBoundColumn>
-
+                                    <telerik:GridTemplateColumn DataField="DTNROFAC" HeaderText="Referencia" UniqueName="DTNROFAC_TK"
+                                        HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="DTNROFAC" Visible="false">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbl_nrofac" runat="server" Text='<%# Eval("DTNROFAC") %>' Visible="false"></asp:Label>
+                                        </ItemTemplate>
+                                    </telerik:GridTemplateColumn>
+                                    <telerik:GridTemplateColumn DataField="DTTIPFAC" HeaderText="Referencia" UniqueName="DTTIPFAC_TK"
+                                        HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="DTTIPFAC" Visible="false">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbl_tipfac" runat="server" Text='<%# Eval("DTTIPFAC") %>' Visible="false"></asp:Label>
+                                        </ItemTemplate>
+                                    </telerik:GridTemplateColumn>
+                                    <telerik:GridButtonColumn CommandName="link" UniqueName="DTNROFAC" DataTextField="DTNROFAC"
+                                            HeaderText="Nro Documento" HeaderStyle-Width="100px">
+                                    </telerik:GridButtonColumn>
                                     <telerik:GridBoundColumn DataField="DTNROITM" HeaderButtonType="TextButton" HeaderStyle-Width="60px"
                                         HeaderText="Item" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="DTNROITM"
                                         UniqueName="DTNROITM">

@@ -513,9 +513,7 @@
                                             </NoRecordsTemplate>
                                         </telerik:GridTableView>
                                     </DetailTables>
-                                    <Columns>
-                                        <telerik:GridButtonColumn ConfirmText="Desea Quita Este Item?" ConfirmDialogType="RadWindow" ConfirmTitle="Delete"
-                                            ButtonType="ImageButton" CommandName="Delete" HeaderStyle-Width="20px" />
+                                    <Columns>                                        
                                         <telerik:GridBoundColumn DataField="BLH_FECHA" HeaderButtonType="TextButton" HeaderStyle-Width="100px" DataFormatString="{0:MM/dd/yyyy}"
                                             HeaderText="Date" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="BLH_FECHA"
                                             UniqueName="BLH_FECHA">
