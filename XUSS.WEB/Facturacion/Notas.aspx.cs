@@ -307,10 +307,10 @@ namespace XUSS.WEB.Facturacion
         }
         protected void rg_items_OnItemCommand(object source, Telerik.Web.UI.GridCommandEventArgs e)
         {
-            (rlv_notas.InsertItem.FindControl("rqv_tercero") as RequiredFieldValidator).Validate();
-            if ((rlv_notas.InsertItem.FindControl("rqv_tercero") as RequiredFieldValidator).IsValid)
+            if (e.CommandName == "InitInsert")
             {
-                if (e.CommandName == "InitInsert")
+                (rlv_notas.InsertItem.FindControl("rqv_tercero") as RequiredFieldValidator).Validate();
+                if ((rlv_notas.InsertItem.FindControl("rqv_tercero") as RequiredFieldValidator).IsValid)
                 {
                     obj_factura.SelectParameters["filter"].DefaultValue = " TERCEROS.TRCODTER =" + (rlv_notas.InsertItem.FindControl("txt_codcli") as RadTextBox).Text + " AND HDESTADO NOT IN ('AN') AND TFCLAFAC  IN ('1','5') ";
                     rg_facturas.DataBind();
@@ -318,10 +318,18 @@ namespace XUSS.WEB.Facturacion
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
                     e.Canceled = true;
                 }
+                else
+                {
+                    e.Canceled = true;
+                }
             }
-            else
+
+            if (e.CommandName == "link")
             {
-                e.Canceled = true;
+                GridDataItem item_ = (GridDataItem)e.Item;
+                string url = ComunBL.GetHttpHttps(HttpContext.Current.Request.Url.AbsoluteUri) + "//" + HttpContext.Current.Request.Url.Authority + "/Facturacion/FacturacionSegmentos.aspx?Documento=" + (item_.FindControl("lbl_tipfac") as Label).Text + "-" + (item_.FindControl("lbl_nrofac") as Label).Text;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "New", "window.open('" + url + "');", true);
+                item_ = null;
             }
         }
         protected void rg_facturas_OnItemCommand(object source, Telerik.Web.UI.GridCommandEventArgs e)
