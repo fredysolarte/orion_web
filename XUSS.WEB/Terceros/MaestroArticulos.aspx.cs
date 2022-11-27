@@ -668,13 +668,13 @@ namespace XUSS.WEB.Terceros
                         (((RadComboBox)sender).Parent.FindControl("txt_clasificacion9") as RadTextBox).Text = Convert.ToString(reader["TACDCLA9"]);
                         (((RadComboBox)sender).Parent.FindControl("txt_clasificacion10") as RadTextBox).Text = Convert.ToString(reader["TACDCLA10"]);
 
-                        DataTable dt1 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 5);
-                        DataTable dt2 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 6);
-                        DataTable dt3 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 7);
-                        DataTable dt4 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 8);
-                        DataTable dt5 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 9);
-                        DataTable dt7 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 10);
-                        DataTable dt8 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 11);
+                        DataTable dt1 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 5, "AC");
+                        DataTable dt2 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 6, "AC");
+                        DataTable dt3 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 7, "AC");
+                        DataTable dt4 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 8, "AC");
+                        DataTable dt5 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 9, "AC");
+                        DataTable dt7 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 10, "AC");
+                        DataTable dt8 = ObjA.GetClavesAlternas(null, Convert.ToString(Session["CODEMP"]), ((RadComboBox)sender).SelectedValue, 11, "AC");
 
                         (((RadComboBox)sender).Parent.FindControl("rc_dt1") as RadComboBox).DataSource = dt1;
                         (((RadComboBox)sender).Parent.FindControl("rc_dt2") as RadComboBox).DataSource = dt2;

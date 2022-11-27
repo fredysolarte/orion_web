@@ -256,6 +256,7 @@
                     <telerik:RadButton RenderMode="Lightweight" ID="btn_agregar" runat="server" Text="Nuevo" Icon-PrimaryIconCssClass="rbAdd" CommandName="InitInsert" ToolTip="Nuevo Registro" />
                     <telerik:RadButton RenderMode="Lightweight" ID="btn_editar" runat="server" Text="Editar" Icon-PrimaryIconCssClass="rbEdit" CommandName="Edit" ToolTip="Editar Registro" />
                     <telerik:RadButton RenderMode="Lightweight" ID="btn_eliminar" runat="server" Text="Anular" Icon-PrimaryIconCssClass="rbRemove" CommandName="Delete" OnClientClicked="Clicking" ToolTip="Anular Registro" />
+                    <telerik:RadButton RenderMode="Lightweight" ID="btn_imprimir" runat="server" Text="Imprimir" OnClick="btn_imprimir_Click" Icon-PrimaryIconCssClass="rbPrint" CommandName="Cancel" ToolTip="Imprimir" />
                 </div>
                 <asp:Panel ID="pnItemMaster" runat="server">
                     <table>
@@ -367,28 +368,28 @@
                                                 UniqueName="WID_ID">
                                                 <ItemStyle HorizontalAlign="Right" />
                                             </telerik:GridBoundColumn>
-                                            <telerik:GridTemplateColumn DataField="WID_NROFACTURA" HeaderText="Factura" UniqueName="WID_NROFACTURA_TK"
+                                            <telerik:GridTemplateColumn DataField="WID_NROFACTURA" HeaderText="Invoice" UniqueName="WID_NROFACTURA_TK"
                                                 HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="WID_NROFACTURA" Visible="false">
                                                 <ItemTemplate>
                                                     <asp:Label ID="lbl_factura" runat="server" Text='<%# Eval("WID_NROFACTURA") %>' Visible="false"></asp:Label>
                                                 </ItemTemplate>
                                             </telerik:GridTemplateColumn>
                                             <telerik:GridButtonColumn CommandName="link_fac" UniqueName="WID_NROFACTURA" DataTextField="WID_NROFACTURA"
-                                                HeaderText="Factura" HeaderStyle-Width="100px">
+                                                HeaderText="Invoice" HeaderStyle-Width="100px">
                                             </telerik:GridButtonColumn>
                                             <telerik:GridBoundColumn DataField="TANOMBRE" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
-                                                HeaderText="Linea" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
+                                                HeaderText="Line" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
                                                 UniqueName="TANOMBRE">
                                                 <ItemStyle HorizontalAlign="Right" />
                                             </telerik:GridBoundColumn>
-                                            <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Referencia" UniqueName="ARCLAVE1_TK"
+                                            <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Reference" UniqueName="ARCLAVE1_TK"
                                                 HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="ARCLAVE1" Visible="false">
                                                 <ItemTemplate>
                                                     <asp:Label ID="lbl_referencia" runat="server" Text='<%# Eval("ARCLAVE1") %>' Visible="false"></asp:Label>
                                                 </ItemTemplate>
                                             </telerik:GridTemplateColumn>
                                             <telerik:GridButtonColumn CommandName="link" UniqueName="ARCLAVE1" DataTextField="ARCLAVE1"
-                                                HeaderText="Referencia" HeaderStyle-Width="100px">
+                                                HeaderText="Reference" HeaderStyle-Width="100px">
                                             </telerik:GridButtonColumn>
                                             <telerik:GridBoundColumn DataField="ARNOMBRE" HeaderButtonType="TextButton" HeaderStyle-Width="450px"
                                                 HeaderText="Nombre" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="ARNOMBRE"
@@ -668,16 +669,16 @@
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
                                         <telerik:GridBoundColumn DataField="WID_NROFACTURA" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
-                                            HeaderText="Factura" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="WID_NROFACTURA"
+                                            HeaderText="Invoice" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="WID_NROFACTURA"
                                             UniqueName="WID_NROFACTURA">
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
                                         <telerik:GridBoundColumn DataField="TANOMBRE" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
-                                            HeaderText="Linea" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
+                                            HeaderText="Line" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
                                             UniqueName="TANOMBRE">
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
-                                        <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Referencia" UniqueName="ARCLAVE1_TK"
+                                        <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Reference" UniqueName="ARCLAVE1_TK"
                                             HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="ARCLAVE1" Visible="false">
                                             <ItemTemplate>
                                                 <asp:Label ID="lbl_referencia" runat="server" Text='<%# Eval("ARCLAVE1") %>' Visible="false"></asp:Label>
@@ -998,16 +999,16 @@
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
                                         <telerik:GridBoundColumn DataField="WID_NROFACTURA" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
-                                            HeaderText="Factura" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="WID_NROFACTURA"
+                                            HeaderText="Invoice" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="WID_NROFACTURA"
                                             UniqueName="WID_NROFACTURA">
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
                                         <telerik:GridBoundColumn DataField="TANOMBRE" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
-                                            HeaderText="Linea" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
+                                            HeaderText="Line" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="TANOMBRE"
                                             UniqueName="TANOMBRE">
                                             <ItemStyle HorizontalAlign="Right" />
                                         </telerik:GridBoundColumn>
-                                        <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Referencia" UniqueName="ARCLAVE1_TK"
+                                        <telerik:GridTemplateColumn DataField="ARCLAVE1" HeaderText="Reference" UniqueName="ARCLAVE1_TK"
                                             HeaderStyle-Width="130px" AllowFiltering="false" SortExpression="ARCLAVE1" Visible="false">
                                             <ItemTemplate>
                                                 <asp:Label ID="lbl_referencia" runat="server" Text='<%# Eval("ARCLAVE1") %>' Visible="false"></asp:Label>

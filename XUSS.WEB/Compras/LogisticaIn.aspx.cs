@@ -929,5 +929,12 @@ namespace XUSS.WEB.Compras
             string url = ComunBL.GetHttpHttps(HttpContext.Current.Request.Url.AbsoluteUri) + "//" + HttpContext.Current.Request.Url.Authority + "/Inventarios/Traslados.aspx?Traslado=" + (sender as LinkButton).Text;
             ScriptManager.RegisterStartupScript(this, this.GetType(), "New", "window.open('" + url + "');", true);
         }
+
+        protected void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            string url = "";
+            url = "http://" + HttpContext.Current.Request.Url.Authority + "/Reportes/VisorPantallaCompleta.aspx?rpt=9022&inban=S&inParametro=inConse&inValor=" + Convert.ToString((rlv_logistica.Items[0].FindControl("txt_nrowr") as RadTextBox).Text);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "New", "window.open('" + url + "');", true);
+        }
     }
 }

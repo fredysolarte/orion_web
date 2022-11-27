@@ -553,5 +553,24 @@ namespace XUSS.BLL.Inventarios
                 Obj = null;
             }
         }
+        public int updateCantidadesPedidos(SessionManager oSessionManager, string CODEMP, string BODEGA, string TP, string C1, string C2, string C3, string C4, string QL,double CANTID,string USUARIO) {
+            MovimientosBD Obj = new MovimientosBD();
+            try {
+                if (Obj.ExisteArticuloBodega(oSessionManager, CODEMP, BODEGA, TP, C1, C2, C3, C4, QL) == 0)
+                    Obj.InsertBalanBod(oSessionManager, CODEMP, BODEGA, TP, C1, C2, C3, C4, QL, 0, 0, CANTID, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, USUARIO, 0, 0);
+                else 
+                    Obj.UpdateBalanBodCanPed(oSessionManager, CODEMP, BODEGA, TP, C1, C2, C3, C4, QL, CANTID, USUARIO);
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Obj = null;
+            }
+        }        
     }
 }

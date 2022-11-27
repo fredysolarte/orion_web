@@ -78,8 +78,8 @@ namespace WFC_ORION.Repository
                 throw ex;
             }
             finally
-            { 
-            
+            {
+                ObjDB = null;
             }
         }
 

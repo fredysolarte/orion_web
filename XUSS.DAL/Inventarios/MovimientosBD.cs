@@ -582,6 +582,35 @@ namespace XUSS.DAL.Inventarios
             }
 
         }
+        public int UpdateBalanBodCanPed(SessionManager oSessionManager, string BBCODEMP, string BBBODEGA, string BBTIPPRO, string BBCLAVE1, string BBCLAVE2, string BBCLAVE3, string BBCLAVE4,
+                                  string BBCODCAL, double BBBODPED, string BBNMUSER)
+        {
+            StringBuilder sSql = new StringBuilder();
+            try
+            {
+                sSql.AppendLine("UPDATE BALANBOD SET BBBODPED = BBBODPED+ @p0, BBNMUSER=@p1, BBFECMOD=GETDATE()");
+                sSql.AppendLine("WHERE BBCODEMP = @p2");
+                sSql.AppendLine("  AND BBBODEGA = @p3");
+                sSql.AppendLine("  AND BBTIPPRO = @p4");
+                sSql.AppendLine("  AND BBCLAVE1 = @p5");
+                sSql.AppendLine("  AND BBCLAVE2 = @p6");
+                sSql.AppendLine("  AND BBCLAVE3 = @p7");
+                sSql.AppendLine("  AND BBCLAVE4 = @p8");
+                sSql.AppendLine("  AND BBCODCAL = @p9");
+
+                return DBAccess.ExecuteNonQuery(oSessionManager, sSql.ToString(), CommandType.Text, BBBODPED, BBNMUSER, BBCODEMP, BBBODEGA, BBTIPPRO, BBCLAVE1, BBCLAVE2, BBCLAVE3, BBCLAVE4,
+                                  BBCODCAL);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sSql = null;
+            }
+
+        }
         public int UpdateBalanBodCanTrn(SessionManager oSessionManager, string BBCODEMP, string BBBODEGA, string BBTIPPRO, string BBCLAVE1, string BBCLAVE2, string BBCLAVE3, string BBCLAVE4,
                                   string BBCODCAL, double BBCANTID, string BBNMUSER)
         {

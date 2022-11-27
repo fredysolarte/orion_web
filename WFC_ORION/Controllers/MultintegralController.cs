@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using WFC_ORION.Models;
 using WFC_ORION.Repository;
 
 namespace WFC_ORION.Controllers
@@ -32,6 +30,32 @@ namespace WFC_ORION.Controllers
         {
             RPMultintegral Obj = new RPMultintegral();
             return Obj.getPropiedadHorizontalDetalle(Configuration.GetValue<string>("Settings:DefaultConnection"), inFiltro);
+        }
+
+        [HttpPost("insertPropiedadHorizontal")]
+        public ActionResult<lst_resultado> insertPropiedadHorizontal(inDetallePropiedadHorizontal inDatos)
+        {
+            RPMultintegral Obj = new RPMultintegral();
+
+            lst_resultado itm = new lst_resultado();
+            int ln_retorno = 0;
+            try
+            {
+                ln_retorno = Obj.insertPropiedadHorizontal(Configuration.GetValue<string>("Settings:DefaultConnection"), inDatos);
+                itm.id = ln_retorno;
+                itm.msg = "Ok";
+
+                return itm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Obj = null;                
+                itm = null;
+            }
         }
     }
 }

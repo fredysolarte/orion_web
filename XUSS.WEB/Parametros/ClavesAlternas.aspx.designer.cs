@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XUSS.WEB.Parametros {
-    
-    
-    public partial class ClavesAlternas {
-        
+namespace XUSS.WEB.Parametros
+{
+
+
+    public partial class ClavesAlternas
+    {
+
         /// <summary>
         /// RadScriptManager1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
+
         /// <summary>
         /// RadAjaxLoadingPanel1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
-        
+
         /// <summary>
         /// RadAjaxPanel2 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel2;
-        
+
         /// <summary>
         /// RadFormDecorator1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadFormDecorator RadFormDecorator1;
-        
+
         /// <summary>
         /// pnVacio control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnVacio;
-        
+
         /// <summary>
         /// rc_linea control.
         /// </summary>
@@ -65,7 +67,16 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rc_linea;
-        
+
+        /// <summary>
+        /// txt_nombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txt_nombre;
+
         /// <summary>
         /// btn_buscar control.
         /// </summary>
@@ -74,7 +85,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btn_buscar;
-        
+
         /// <summary>
         /// rg_items control.
         /// </summary>
@@ -83,7 +94,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid rg_items;
-        
+
         /// <summary>
         /// obj_claves control.
         /// </summary>
@@ -92,7 +103,7 @@ namespace XUSS.WEB.Parametros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource obj_claves;
-        
+
         /// <summary>
         /// obj_tippro control.
         /// </summary>

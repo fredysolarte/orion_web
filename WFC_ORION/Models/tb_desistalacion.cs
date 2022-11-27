@@ -7,8 +7,8 @@ namespace WFC_ORION.Models
 {
     public class tb_desistalacion
     {
-        public int di_codigo { get; set; }
-        public int ph_codigo { get; set; }
+        public int? di_codigo { get; set; }
+        public int? ph_codigo { get; set; }
         public string di_codemp { get; set; }
         public string di_fecha { get; set; }
         public string di_usuario { get; set; }

@@ -67,7 +67,7 @@ namespace WFC_ORION.BLL
                 Obj = null;
             }
         }
-        public static articulo getArticulo(SqlDataReader Reader) {
+        public articulo getArticulo(SqlDataReader Reader) {
             articulo item = new articulo();
             try {
                 item.arcodemp = Convert.ToString(Reader["ARCODEMP"]);
@@ -143,9 +143,9 @@ namespace WFC_ORION.BLL
                 item.ardttec9 = Convert.ToString(Reader["ARDTTEC9"]);
                 item.arcdcla10 = Convert.ToString(Reader["ARCDCLA10"]);
                 item.ardttec10 = Convert.ToString(Reader["ARDTTEC10"]);
-                item.asnombre1 = Convert.ToString(Reader["ASNOMBRE1"]);
-                item.asnombre2 = Convert.ToString(Reader["ASNOMBRE2"]);
-                item.asnombre3 = Convert.ToString(Reader["ASNOMBRE3"]);
+                //item.asnombre1 = Convert.ToString(Reader["ASNOMBRE1"]);
+                //item.asnombre2 = Convert.ToString(Reader["ASNOMBRE2"]);
+                //item.asnombre3 = Convert.ToString(Reader["ASNOMBRE3"]);
 
                 return item;
             }

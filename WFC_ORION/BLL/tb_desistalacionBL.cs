@@ -43,8 +43,8 @@ namespace WFC_ORION.BLL
 
             try
             {
-                item.di_codigo = Convert.ToInt32(Reader["DI_CODIGO"]);
-                item.ph_codigo = Convert.ToInt32(Reader["PH_CODIGO"]);
+                item.di_codigo = Reader.IsDBNull(Reader.GetOrdinal("DI_CODIGO")) ? null : (int?)Convert.ToInt32(Reader["DI_CODIGO"]);
+                item.ph_codigo = Reader.IsDBNull(Reader.GetOrdinal("PH_CODIGO")) ? null : (int?)Convert.ToInt32(Reader["PH_CODIGO"]);
                 item.di_codemp = Convert.ToString(Reader["DI_CODEMP"]);
                 item.di_fecha = Convert.ToString(Reader["DI_FECHA"]);
                 item.di_usuario = Convert.ToString(Reader["DI_USUARIO"]);

@@ -333,6 +333,13 @@
                             <td>
                                 <asp:LinkButton ID="lkn_factura" CommandName="Cancel" CausesValidation="true" runat="server" Text='<%# Eval("lkn") %>' OnClick="lkn_factura_Click" />
                             </td>
+                            <td>
+                                <label>Nro WR Alt</label>
+                            </td>
+                            <td>
+                                <telerik:RadTextBox ID="txt_nrowralt" runat="server" Enabled="false" Text='<%# Eval("WOH_NROALT") %>' Width="300px">
+                                </telerik:RadTextBox>
+                            </td>
                         </tr>
                         <%-- <td>
                                 <label>Nro Traslado</label>
@@ -758,6 +765,15 @@
                         </tr>
                         <tr>
                             <td>
+                                <label>Nro WR Alt</label>
+                            </td>
+                            <td>
+                                <telerik:RadTextBox ID="txt_nrowralt" runat="server" Enabled="true" Text='<%# Bind("WOH_NROALT") %>' Width="300px">
+                                </telerik:RadTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Observaciones</label></td>
                             <td colspan="3">
                                 <telerik:RadTextBox ID="txt_observaciones" runat="server" Enabled="true" Text='<%# Bind("WOH_OBSERVACIONES") %>'
@@ -1149,6 +1165,15 @@
                             <td>
                                 <telerik:RadDatePicker ID="txt_fechaent" runat="server" DbSelectedDate='<%# Bind("WOH_FECHAENT") %>' MinDate="01/01/1900" Enabled="false">
                                 </telerik:RadDatePicker>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Nro WR Alt</label>
+                            </td>
+                            <td>
+                                <telerik:RadTextBox ID="txt_nrowralt" runat="server" Enabled="true" Text='<%# Bind("WOH_NROALT") %>' Width="300px">
+                                </telerik:RadTextBox>
                             </td>
                         </tr>
                         <tr>
@@ -2182,6 +2207,7 @@
             <asp:Parameter Name="WOH_OBSERVACIONES" Type="String" />
             <asp:SessionParameter Name="WOH_USUARIO" Type="String" SessionField="UserLogon" />
             <asp:Parameter Name="WOH_ESTADO" Type="String" DefaultValue="AC" />
+            <asp:Parameter Name="WOH_NROALT" Type="String" />            
             <asp:Parameter Name="tbItems" Type="Object" />
             <asp:Parameter Name="tbBL" Type="Object" />
             <asp:Parameter Name="tbBLDT" Type="Object" />
@@ -2199,6 +2225,7 @@
             <asp:Parameter Name="WOH_OBSERVACIONES" Type="String" />
             <asp:SessionParameter Name="WOH_USUARIO" Type="String" SessionField="UserLogon" />
             <asp:Parameter Name="WOH_ESTADO" Type="String" DefaultValue="AC" />
+            <asp:Parameter Name="WOH_NROALT" Type="String" />            
             <asp:Parameter Name="tbBL" Type="Object" />
             <asp:Parameter Name="tbBLDT" Type="Object" />
             <asp:Parameter Name="tbSoportes" Type="Object" />

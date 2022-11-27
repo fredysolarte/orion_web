@@ -232,6 +232,13 @@
                             AllowFiltering="false" HeaderText="Can Ctl" ItemStyle-HorizontalAlign="Right"
                             Resizable="true" SortExpression="BBCANCTL">
                         </telerik:GridBoundColumn>
+                        <%--<telerik:GridBoundColumn DataField="BBBODPED" HeaderButtonType="TextButton" HeaderStyle-Width="80px" ItemStyle-ForeColor="Salmon" ItemStyle-Font-Bold="true"
+                            AllowFiltering="false" HeaderText="Can Ped" ItemStyle-HorizontalAlign="Right"
+                            Resizable="true" SortExpression="BBBODPED">
+                        </telerik:GridBoundColumn>--%>
+                        <telerik:GridButtonColumn CommandName="canped" UniqueName="BBBODPED" DataTextField="BBBODPED" ItemStyle-ForeColor="Blue" ItemStyle-Font-Bold="true"
+                            HeaderText="Can Ped" HeaderStyle-Width="100px">
+                        </telerik:GridButtonColumn>
                         <telerik:GridBoundColumn DataField="BBBODEGA" HeaderButtonType="TextButton" HeaderStyle-Width="20px"
                             AllowFiltering="false" HeaderText="" ItemStyle-HorizontalAlign="Right"
                             Resizable="true" SortExpression="BBBODEGA">
@@ -362,7 +369,47 @@
                                     </div>
                                 </NoRecordsTemplate>
                             </MasterTableView>
-
+                        </telerik:RadGrid>
+                    </ContentTemplate>
+                </telerik:RadWindow>
+                <telerik:RadWindow RenderMode="Lightweight" ID="modalPedidos" runat="server" Width="895px" Height="550px" Modal="true" OffsetElementID="main" Title="Seguimiento Mercancia Reservada" EnableShadow="true">
+                    <ContentTemplate>
+                        <telerik:RadGrid ID="rgPedidos" runat="server" GridLines="None" Width="100%" AutoGenerateColumns="False" OnItemCommand="rg_pedidos_OnItemCommand"
+                            Culture="(Default)" CellSpacing="0" ShowFooter="True" ShowGroupPanel="True" RenderMode="Lightweight">
+                            <ClientSettings AllowDragToGroup="True" AllowColumnsReorder="True">
+                                <Scrolling AllowScroll="True" UseStaticHeaders="True"></Scrolling>
+                            </ClientSettings>
+                            <MasterTableView ShowGroupFooter="true" CommandItemDisplay="Top" >
+                                <CommandItemSettings ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowExportToExcelButton="true"
+                                    ShowExportToPdfButton="true" ShowAddNewRecordButton="false" ShowRefreshButton="false" />
+                                <Columns>
+                                    <telerik:GridBoundColumn DataField="MBCDTRAN" HeaderButtonType="TextButton" HeaderStyle-Width="35px"
+                                        HeaderText="" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="MBCDTRAN"
+                                        UniqueName="MBCDTRAN">
+                                        <ItemStyle HorizontalAlign="Right" />
+                                    </telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="DESCRIPCION" HeaderButtonType="TextButton" HeaderStyle-Width="230px"
+                                        HeaderText="T. Movimiento" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="DESCRIPCION"
+                                        UniqueName="DESCRIPCION">
+                                        <ItemStyle HorizontalAlign="Right" />
+                                    </telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="FBCANTID" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
+                                        HeaderText="Cantidad" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="FBCANTID"
+                                        UniqueName="FBCANTID" FooterText="Total: " Aggregate="Sum">
+                                        <ItemStyle HorizontalAlign="Right" />
+                                    </telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="FBFECING" HeaderButtonType="TextButton" HeaderStyle-Width="170px"
+                                        HeaderText="Fec Movimiento" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="FBFECING"
+                                        UniqueName="FBFECING">
+                                        <ItemStyle HorizontalAlign="Right" />
+                                    </telerik:GridBoundColumn>
+                                </Columns>
+                                <NoRecordsTemplate>
+                                    <div class="alert alert-danger">
+                                        <strong>¡No se Encontaron Registros!</strong>
+                                    </div>
+                                </NoRecordsTemplate>
+                            </MasterTableView>
                         </telerik:RadGrid>
                     </ContentTemplate>
                 </telerik:RadWindow>

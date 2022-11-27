@@ -134,9 +134,8 @@ namespace XUSS.BLL.Pedidos
             string PHESTADO, object DetPedidos, int original_PHPEDIDO)
         {
             SessionManager oSessionManager = new SessionManager(null);
-            int ln_consecutivo = 0;
-            int ln_codter = 0;
-            int ln_acu = 0;
+            MovimientosBL ObjM = new MovimientosBL();
+            int ln_consecutivo = 0, ln_codter = 0, ln_acu = 0;            
             DataTable dt = new DataTable();
             DataTable tbMonedas = new DataTable();
             DataTable tbTasa = new DataTable();
@@ -150,10 +149,17 @@ namespace XUSS.BLL.Pedidos
                 tbMonedas = ComunBD.GetTbTablaLista(oSessionManager, PHCODEMP, "MONE");
                 tbTasa = TasaCambioBD.GetTasas(oSessionManager, PHFECLIQ);
                 ln_consecutivo = original_PHPEDIDO;
-                
-                PedidosBD.UpdatePedidoHD(oSessionManager,
-                                                  PHCODEMP, ln_consecutivo, PHCODCLI, PHCODSUC, PHAGENTE,PHTIPPED, PHIDIOMA, PHMONEDA, PHTRMLOC, 0
+
+                if (PHESTADO == "LQ")
+                {
+                    PedidosBD.UpdatePedidoHD(oSessionManager,
+                                                  PHCODEMP, ln_consecutivo, PHCODCLI, PHCODSUC, PHAGENTE, PHTRMLOC, PHESTADO, PHNMUSER, PHLISPRE, PHOBSERV, PHFECLIQ);
+                }
+                else {
+                    PedidosBD.UpdatePedidoHD(oSessionManager,
+                                                  PHCODEMP, ln_consecutivo, PHCODCLI, PHCODSUC, PHAGENTE, PHTIPPED, PHIDIOMA, PHMONEDA, PHTRMLOC, 0
                                                 , 0, "0", 0, 0, 0, 0, 0, PHESTADO, ".", PHNMUSER, PHLISPRE, PHOBSERV, PHFECLIQ);
+                }
 
                 PedidosBD.BorrarItemsPedidoDTMoneda(oSessionManager, PHCODEMP, ln_consecutivo);
                 PedidosBD.BorrarItemsPedido(oSessionManager, PHCODEMP, ln_consecutivo);              
@@ -170,6 +176,16 @@ namespace XUSS.BLL.Pedidos
                                              null, null, null, null, null, null, null, null, null,
                                              null, null, null, "AC", ".", PHNMUSER, null,
                                              null, null, null, null, null, null, null, null, null, row.IsNull("PDCODDES") ? null : (Int32?)Convert.ToInt32(row["PDCODDES"]), row.IsNull("PDSUBTOT")? null: (double?)Convert.ToDouble(row["PDSUBTOT"]));
+                    
+                    //Actualzia cantidades Pedidos Balances Bodegas
+                    if (PHESTADO == "LQ")
+                    {
+                        double ln_canped = LtaEmpaqueBD.getCantidadesPedidos(oSessionManager, PHCODEMP, Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]), Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]),
+                                             Convert.ToString(row["PDCLAVE4"]), Convert.ToString(row["PDBODEGA"]));
+
+                        ObjM.updateCantidadesPedidos(oSessionManager, PHCODEMP, Convert.ToString(row["PDBODEGA"]), Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]), Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]),
+                                             Convert.ToString(row["PDCLAVE4"]), ".", Convert.ToDouble(row["PDCANTID"]) + ln_canped, PHNMUSER);
+                    }
                     //Multimoneda
                     foreach (DataRow rz in tbMonedas.Rows)
                     {
@@ -199,6 +215,7 @@ namespace XUSS.BLL.Pedidos
                 tbTasa = null;
                 tbMonedas = null;
                 dt = null;
+                ObjM = null;
             }
         }
         public int TieneListaEmpaque(string connection, string PHCODEMP, int PHPEDIDO)

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -8,7 +6,6 @@ using System.Data;
 using Telerik.Web.UI;
 using System.Text;
 using XUSS.BLL.Pedidos;
-using AjaxControlToolkit;
 using XUSS.BLL.Terceros;
 using XUSS.BLL;
 using XUSS.BLL.Articulos;
@@ -191,57 +188,83 @@ namespace XUSS.WEB.Pedidos
                     }                    
                     break;
                 case "Liquidar":
-                     double ln_precio = 0;
-                            string tp = "", c1 = "", c2 = "", c3, c4;
-                            DescuentosBL objp = new DescuentosBL();
-                            try
+                    double ln_precio = 0;
+                    string tp = "", c1 = "", c2 = "", c3, c4;
+                    DescuentosBL objp = new DescuentosBL();
+                    LtaEmpaqueBL ObjL = new LtaEmpaqueBL();
+                    try
+                    {
+                        foreach (DataRow row in tbItems.Rows)
+                        {
+                            tp = Convert.ToString(row["PDTIPPRO"]);
+                            c1 = Convert.ToString(row["PDCLAVE1"]);
+                            c2 = Convert.ToString(row["PDCLAVE2"]);
+                            c3 = Convert.ToString(row["PDCLAVE3"]);
+                            c4 = Convert.ToString(row["PDCLAVE4"]);
+
+                            if (Convert.ToString(row["PDLISPRE"]) == "-1" || string.IsNullOrEmpty(Convert.ToString(row["PDLISPRE"])))
                             {
-                                foreach (DataRow row in tbItems.Rows)
+                                ln_precio = objp.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue));
+                                row["PDLISPRE"] = Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue);
+                            }
+                            else
+                            {
+                                ln_precio = objp.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(row["PDLISPRE"]));
+                            }
+
+                            row["PDPRELIS"] = ln_precio;
+
+                            objp.GetVlrDctoArt(Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]), Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]),
+                                                Convert.ToString(row["PDCLAVE4"]), ".", Convert.ToDouble(row["PDPRELIS"]));
+
+                            row["PDDESCUE"] = objp.VlrDctoP;
+                            row["PDCODDES"] = objp.CodDcto;
+                            row["PDPRECIO"] = ln_precio - ((ln_precio * objp.VlrDctoP) / 100);
+
+                            double ln_cantidad_bod = 0;
+                            foreach (DataRow rz in ObjL.GetDisposicion(null, Convert.ToString(Session["CODEMP"]), Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]),
+                                Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]), Convert.ToString(row["PDCLAVE4"]), Convert.ToString(row["PDBODEGA"]), 0).Rows)
+                            {
+                                double ln_canped = ObjL.getCantidadesPedidos(null, Convert.ToString(Session["CODEMP"]), Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]),
+                                Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]), Convert.ToString(row["PDCLAVE4"]), Convert.ToString(row["PDBODEGA"]));
+
+                                if (Convert.ToInt32(rz["BBCANTID"]) - ln_canped <= 0)
                                 {
-                                    tp = Convert.ToString(row["PDTIPPRO"]);
-                                    c1 = Convert.ToString(row["PDCLAVE1"]);
-                                    c2 = Convert.ToString(row["PDCLAVE2"]);
-                                    c3 = Convert.ToString(row["PDCLAVE3"]);
-                                    c4 = Convert.ToString(row["PDCLAVE4"]);
-
-                                    if (Convert.ToString(row["PDLISPRE"]) == "-1" || string.IsNullOrEmpty(Convert.ToString(row["PDLISPRE"])))
-                                    {
-                                        ln_precio = objp.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue));
-                                        row["PDLISPRE"] = Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue);
-                                    }
-                                    else
-                                    {
-                                        ln_precio = objp.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(row["PDLISPRE"]));
-                                    }
-
-                                    row["PDPRELIS"] = ln_precio;
-
-                                    objp.GetVlrDctoArt(Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]), Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]),
-                                                      Convert.ToString(row["PDCLAVE4"]), ".", Convert.ToDouble(row["PDPRELIS"]));
-
-                                    row["PDDESCUE"] = objp.VlrDctoP;
-                                    row["PDCODDES"] = objp.CodDcto;
-                                    row["PDPRECIO"] = ln_precio - ((ln_precio * objp.VlrDctoP) / 100);
-                                    row["PDSUBTOT"] = Convert.ToDouble(row["PDPRECIO"]) * Convert.ToDouble(row["PDCANTID"]);
-
-                                    tbItems.AcceptChanges();
+                                    ln_cantidad_bod = 0;
                                 }
-                                (rlv_pedidos.Items[0].FindControl("rg_items") as RadGrid).DataSource = tbItems;
-                                (rlv_pedidos.Items[0].FindControl("rg_items") as RadGrid).DataBind();
-                                (rlv_pedidos.Items[0].FindControl("rc_estado") as RadComboBox).SelectedValue = "LQ";
+                                else
+                                {
+                                    if ((Convert.ToInt32(rz["BBCANTID"]) - ln_canped) <= Convert.ToInt32(row["PDCANTID"]))
+                                        ln_cantidad_bod = (Convert.ToInt32(rz["BBCANTID"]) - ln_canped);
+                                    else
+                                        ln_cantidad_bod = Convert.ToInt32(row["PDCANTID"]);
+                                }
+                                //ln_cantidad_bod = (Convert.ToInt32(rz["BBCANTID"]) - Convert.ToInt32(rz["BBBODPED"]) <= 0) ? 0 : Convert.ToInt32(rz["BBCANTID"]) - Convert.ToInt32(rz["BBBODPED"]);
+                                row["PDCANTID"] = ln_cantidad_bod;
                             }
-                            catch (Exception ex)
-                            {
-                                litTextoMensaje.Text = "Error :" + ex.Message + "TP:" + tp + " C1:" + c1 + " C2:" + c2;
-                                //mpMensajes.Show();
-                                string script = "function f(){$find(\"" + modalMensaje.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
-                                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
-                                //throw ex;
-                            }
-                            finally
-                            {
-                                obj = null;
-                            }
+
+                            row["PDCANTID"] = ln_cantidad_bod;
+                            row["PDSUBTOT"] = Convert.ToDouble(row["PDPRECIO"]) * Convert.ToDouble(row["PDCANTID"]);
+
+                            tbItems.AcceptChanges();
+                        }
+                        (rlv_pedidos.Items[0].FindControl("rg_items") as RadGrid).DataSource = tbItems;
+                        (rlv_pedidos.Items[0].FindControl("rg_items") as RadGrid).DataBind();
+                        (rlv_pedidos.Items[0].FindControl("rc_estado") as RadComboBox).SelectedValue = "LQ";
+                    }
+                    catch (Exception ex)
+                    {
+                        litTextoMensaje.Text = "Error :" + ex.Message + "TP:" + tp + " C1:" + c1 + " C2:" + c2;
+                        //mpMensajes.Show();
+                        string script = "function f(){$find(\"" + modalMensaje.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
+                        //throw ex;
+                    }
+                    finally
+                    {
+                        obj = null;
+                        ObjL = null;
+                    }
                     break;                
             }
             if (lb_bandera)
@@ -1040,6 +1063,7 @@ namespace XUSS.WEB.Pedidos
                     string tp = "", c1 = "", c2 = "", c3, c4;
                     DescuentosBL obj = new DescuentosBL();
                     TasaCambioBL ObjT = new TasaCambioBL();
+                    LtaEmpaqueBL ObjL = new LtaEmpaqueBL();
                     ComunBL ObjC = new ComunBL();
                     GridBoundColumn boundColumn;
                     int i = 1;
@@ -1087,15 +1111,28 @@ namespace XUSS.WEB.Pedidos
                             c3 = Convert.ToString(row["PDCLAVE3"]);
                             c4 = Convert.ToString(row["PDCLAVE4"]);
 
-                            //if (Convert.ToString(row["PDLISPRE"]) == "-1" || string.IsNullOrEmpty(Convert.ToString(row["PDLISPRE"])))
-                            //{
-                            //    ln_precio = obj.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue));
-                            //    row["PDLISPRE"] = Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue);
-                            //}
-                            //else
-                            //{
-                            //    ln_precio = obj.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(row["PDLISPRE"]));
-                            //}
+                            double ln_cantidad_bod = 0;
+                            foreach (DataRow rz in ObjL.GetDisposicion(null, Convert.ToString(Session["CODEMP"]), Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]),
+                                Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]), Convert.ToString(row["PDCLAVE4"]), Convert.ToString(row["PDBODEGA"]), 0).Rows)
+                            {
+                                double ln_canped = ObjL.getCantidadesPedidos(null,Convert.ToString(Session["CODEMP"]), Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]),
+                                Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]), Convert.ToString(row["PDCLAVE4"]), Convert.ToString(row["PDBODEGA"]));
+
+                                if (Convert.ToInt32(rz["BBCANTID"]) - ln_canped  <= 0)
+                                {
+                                    ln_cantidad_bod = 0;
+                                }
+                                else
+                                {
+                                    if ((Convert.ToInt32(rz["BBCANTID"]) - ln_canped) <= Convert.ToInt32(row["PDCANTID"]))
+                                        ln_cantidad_bod = (Convert.ToInt32(rz["BBCANTID"]) - ln_canped);
+                                    else
+                                        ln_cantidad_bod = Convert.ToInt32(row["PDCANTID"]);
+                                }
+                                //ln_cantidad_bod = (Convert.ToInt32(rz["BBCANTID"]) - Convert.ToInt32(rz["BBBODPED"]) <= 0) ? 0 : Convert.ToInt32(rz["BBCANTID"]) - Convert.ToInt32(rz["BBBODPED"]);
+                                row["PDCANTID"] = ln_cantidad_bod;
+                            }
+
                             if (gc_moneda == Convert.ToString((rlv_pedidos.Items[0].FindControl("rc_moneda") as RadComboBox).SelectedValue))
                             {
                                 ln_precio = obj.GetPrecio(Convert.ToString(Session["CODEMP"]), tp, c1, c2, c3, c4, Convert.ToString(((rlv_pedidos.Items[0].FindControl("rc_lstprecio")) as RadComboBox).SelectedValue));
@@ -1106,13 +1143,12 @@ namespace XUSS.WEB.Pedidos
                                 row["PDPRELIS"] = ln_precio;
 
                                 obj.GetVlrDctoArt(Convert.ToString(row["PDTIPPRO"]), Convert.ToString(row["PDCLAVE1"]), Convert.ToString(row["PDCLAVE2"]), Convert.ToString(row["PDCLAVE3"]),
-                                                  Convert.ToString(row["PDCLAVE4"]), ".", Convert.ToDouble(row["PDPRELIS"]));
+                                                  Convert.ToString(row["PDCLAVE4"]), ".", Convert.ToDouble(row["PDPRELIS"]));                                
 
                                 row["PDDESCUE"] = obj.VlrDctoP;
                                 row["PDCODDES"] = obj.CodDcto;
                                 row["PDPRECIO"] = ln_precio - ((ln_precio * obj.VlrDctoP) / 100);
                                 row["PDSUBTOT"] = Convert.ToDouble(row["PDPRECIO"]) * Convert.ToDouble(row["PDCANTID"]);
-
 
                                 foreach (DataRow rw in tbMonedas.Rows)
                                 {
@@ -1204,6 +1240,7 @@ namespace XUSS.WEB.Pedidos
                     {
                         obj = null;
                         ObjT = null;
+                        ObjL = null;
                     }
                     break;
                 case "Delete":
@@ -1385,58 +1422,16 @@ namespace XUSS.WEB.Pedidos
                                     else
                                     {
                                         foreach (DataRow rz in ObjL.GetDisposicion(null, Convert.ToString(Session["CODEMP"]), Convert.ToString(rx["ARTIPPRO"]), Convert.ToString(rx["ARCLAVE1"]), Convert.ToString(rx["ARCLAVE2"]), Convert.ToString(rx["ARCLAVE3"]), Convert.ToString(rx["ARCLAVE4"]), lc_bodega, 0).Rows)
-                                            ln_cantidad_bod = Convert.ToInt32(rz["BBCANTID"]);
+                                            ln_cantidad_bod = Convert.ToInt32(rz["BBCANTID"]) - Convert.ToInt32(rz["BBBODPED"]);
+
                                         if (ln_cantidad_bod > ln_cantidad)
                                             this.InsertItemTbItems(Convert.ToString(rx["ARTIPPRO"]), Convert.ToString(rx["ARCLAVE1"]), Convert.ToString(rx["ARCLAVE2"]), Convert.ToString(rx["ARCLAVE3"]), Convert.ToString(rx["ARCLAVE4"]),
                                                 ln_cantidad, ln_cantidad, lc_bodega, Convert.ToString(rx["ARNOMBRE"]), Convert.ToString(rx["TANOMBRE"]));
                                         else
                                             this.InsertItemTbItems(Convert.ToString(rx["ARTIPPRO"]), Convert.ToString(rx["ARCLAVE1"]), Convert.ToString(rx["ARCLAVE2"]), Convert.ToString(rx["ARCLAVE3"]), Convert.ToString(rx["ARCLAVE4"]),
                                                 ln_cantidad_bod, ln_cantidad, lc_bodega, Convert.ToString(rx["ARNOMBRE"]), Convert.ToString(rx["TANOMBRE"]));
-                                    }
-
+                                    }                                    
                                     
-                                    //DataRow row = tbItems.NewRow();
-                                    //row["PDLINNUM"] = tbItems.Rows.Count + 1;
-                                    //row["PDTIPPRO"] = Convert.ToString(rx["ARTIPPRO"]);
-                                    //row["PDCLAVE1"] = Convert.ToString(rx["ARCLAVE1"]);
-                                    //row["PDCLAVE2"] = Convert.ToString(rx["ARCLAVE2"]);
-                                    //row["PDCLAVE3"] = Convert.ToString(rx["ARCLAVE3"]);
-                                    //row["PDCLAVE4"] = Convert.ToString(rx["ARCLAVE4"]);
-                                    //row["PDCODCAL"] = ".";
-                                    //row["PDUNDPED"] = "UN";
-                                    //row["PDCANPED"] = ln_cantidad;
-                                    //row["PDCANTID"] = 0;
-
-                                    //if (string.IsNullOrEmpty(lc_bodega) || string.IsNullOrWhiteSpace(lc_bodega))
-                                    //    lc_bodega = Convert.ToString((rlv_pedidos.InsertItem.FindControl("rc_bodega") as RadComboBox).SelectedValue);
-
-                                    //foreach (DataRow rz in ObjL.GetDisposicion(null, Convert.ToString(Session["CODEMP"]), Convert.ToString(rx["ARTIPPRO"]), Convert.ToString(rx["ARCLAVE1"]), Convert.ToString(rx["ARCLAVE2"]), Convert.ToString(rx["ARCLAVE3"]), Convert.ToString(rx["ARCLAVE4"]), lc_bodega, 0).Rows)
-                                    //{
-                                    //    if (Convert.ToInt32(rz["BBCANTID"]) > ln_cantidad)
-                                    //        row["PDCANTID"] = ln_cantidad;
-                                    //    else
-                                    //        row["PDCANTID"] = rz["BBCANTID"];
-                                    //}
-
-                                    //row["PDBODEGA"] = lc_bodega;
-                                    //row["PDPRELIS"] = 0;
-                                    //row["PDDESCUE"] = 0;
-                                    //row["ARNOMBRE"] = Convert.ToString(rx["ARNOMBRE"]);
-                                    //row["PDPRECIO"] = 0;
-                                    //row["PDCANDES"] = 0;
-                                    //row["PDCANCAN"] = 0;
-                                    //row["PDASGBOD"] = 0;
-                                    //row["PDASGCOM"] = 0;
-                                    //row["PDASGPRO"] = 0;
-                                    //row["PDESTADO"] = "AC";
-                                    //row["PDCAUSAE"] = ".";
-                                    //row["PDNMUSER"] = "";
-                                    //row["PDFECING"] = System.DateTime.Today;
-                                    //row["PDFECMOD"] = System.DateTime.Today;
-                                    //row["TANOMBRE"] = Convert.ToString(rx["TANOMBRE"]);
-
-                                    //tbItems.Rows.Add(row);
-                                    //break;
                                 }
                                 if (!lb_Existe)
                                     sCadena.AppendLine("Referencia :" + lc_referencia);

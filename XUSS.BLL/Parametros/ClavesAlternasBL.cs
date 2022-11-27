@@ -77,5 +77,21 @@ namespace XUSS.BLL.Parametros
                 oSessionManager = null;
             }
         }
+        public DataTable GetClavesAlternas(string connection, string ARCODEMP, string ARTIPPRO, int ASNIVELC, string ASESTADO)
+        {
+            SessionManager oSessionManager = new SessionManager(connection);
+            try
+            {
+                return ClavesAlternasBD.GetClavesAlternas(oSessionManager, ARCODEMP, ARTIPPRO, ASNIVELC, ASESTADO);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                oSessionManager = null;
+            }
+        }
     }
 }

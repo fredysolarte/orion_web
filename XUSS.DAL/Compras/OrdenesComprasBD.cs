@@ -1473,15 +1473,15 @@ namespace XUSS.DAL.Compras
             }
         }
         public static int InsertWROUT(SessionManager oSessionManager, int WOH_CONSECUTIVO, string WOH_CODEMP, DateTime WOH_FECHASAL, DateTime WOH_FECHAENT, string BDBODEGA, string BDBODEGA1, string BDBODEGA2,
-            int TRCODTER, string WOH_OBSERVACIONES, string WOH_USUARIO, string WOH_ESTADO, int TSNROTRA)
+            int TRCODTER, string WOH_OBSERVACIONES, string WOH_USUARIO, string WOH_ESTADO, int TSNROTRA, string WOH_NROALT)
         {
             StringBuilder sSql = new StringBuilder();
             try
             {
-                sSql.AppendLine("INSERT INTO TB_WROUTHD (WOH_CONSECUTIVO,WOH_CODEMP,WOH_FECHASAL,WOH_FECHAENT,BDBODEGA,BDBODEGA1,BDBODEGA2,TRCODTER,WOH_OBSERVACIONES,WOH_USUARIO,WOH_ESTADO,TSNROTRA,WOH_FECING,WOH_FECMOD)");
-                sSql.AppendLine("VALUES (@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,GETDATE(),GETDATE())");
+                sSql.AppendLine("INSERT INTO TB_WROUTHD (WOH_CONSECUTIVO,WOH_CODEMP,WOH_FECHASAL,WOH_FECHAENT,BDBODEGA,BDBODEGA1,BDBODEGA2,TRCODTER,WOH_OBSERVACIONES,WOH_USUARIO,WOH_ESTADO,TSNROTRA,WOH_NROALT,WOH_FECING,WOH_FECMOD)");
+                sSql.AppendLine("VALUES (@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,GETDATE(),GETDATE())");
 
-                return DBAccess.ExecuteNonQuery(oSessionManager, sSql.ToString(), CommandType.Text, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO,TSNROTRA);
+                return DBAccess.ExecuteNonQuery(oSessionManager, sSql.ToString(), CommandType.Text, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO,TSNROTRA, WOH_NROALT);
             }
             catch (Exception ex)
             {

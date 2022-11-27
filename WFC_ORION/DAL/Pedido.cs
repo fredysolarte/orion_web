@@ -29,15 +29,16 @@ namespace WFC_ORION.DAL
 		public static SqlDataReader GetPedidos(DBAccess ObjDB, string EMPRESA, string inFiltro)
 		{
 			StringBuilder sql = new StringBuilder();
-
 			
 			try
 			{
-				sql.AppendLine("SELECT PEDIDOHD.*,TERCEROS.* FROM PEDIDOHD WITH(NOLOCK) ");
-				sql.AppendLine("INNER JOIN TERCEROS WITH(NOLOCK) ON TRCODEMP = PHCODEMP AND TRCODTER = PHCODCLI");
+				sql.AppendLine("SELECT TOP 100 PEDIDOHD.*,TERCEROS.* FROM PEDIDOHD WITH(NOLOCK) ");
+				sql.AppendLine("INNER JOIN TERCEROS WITH(NOLOCK) ON TRCODEMP = PHCODEMP AND TRCODTER = PHCODCLI");               
 				sql.AppendLine("WHERE PHCODEMP = @p0 " + inFiltro);
+                sql.AppendLine("ORDER BY PHFECPED DESC");
 
-				return ObjDB.ExecuteReader(sql.ToString(), EMPRESA);
+
+                return ObjDB.ExecuteReader(sql.ToString(), EMPRESA);
 			}
 			catch (Exception ex)
 			{

@@ -8,7 +8,7 @@ using WFC_ORION.Models;
 namespace WFC_ORION.BLL
 {
     public class TercerosBL
-    {
+    {        
         public Terceros getTercerosItem(SqlDataReader Reader)
         {
             Terceros item = new Terceros();

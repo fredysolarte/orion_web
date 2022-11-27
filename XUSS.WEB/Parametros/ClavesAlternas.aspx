@@ -34,7 +34,8 @@
                                 </label>
                             </td>
                             <td>
-
+                                <telerik:RadTextBox ID="txt_nombre" runat="server" Enabled="true" Width="300px" >
+                                </telerik:RadTextBox> 
                             </td>
                             <td>
                                 <telerik:RadButton ID="btn_buscar" runat="server" Text="Aceptar" OnClick="btn_buscar_Click" Icon-PrimaryIconCssClass="rbSearch" CausesValidation="true" RenderMode="Lightweight">
@@ -74,6 +75,11 @@
                     <telerik:GridBoundColumn DataField="ASNOMBRE" HeaderButtonType="TextButton" HeaderStyle-Width="200px"
                         HeaderText="Nombre" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="ASNOMBRE"
                         UniqueName="ASNOMBRE">
+                        <ItemStyle HorizontalAlign="Right" />
+                    </telerik:GridBoundColumn>                    
+                    <telerik:GridBoundColumn DataField="ASESTADO" HeaderButtonType="TextButton" HeaderStyle-Width="100px"
+                        HeaderText="Estado" ItemStyle-HorizontalAlign="Right" Resizable="true" SortExpression="ASESTADO"
+                        UniqueName="ASESTADO">
                         <ItemStyle HorizontalAlign="Right" />
                     </telerik:GridBoundColumn>                    
                 </Columns>
@@ -128,7 +134,7 @@
                                                 ErrorMessage="(*)" ValidationGroup="gvInsert">
                                             <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/Tema2/Images/Cancel.gif" /></asp:RequiredFieldValidator>
                                 </td>
-                            </tr>
+                            </tr>                            
                             <tr>
                                 <td>
                                     <asp:ImageButton ID="btn_aceptar" runat="server" Text="Aceptar" CommandName='<%# (Container is GridEditFormInsertItem) ? "PerformInsert" : "Update" %>'

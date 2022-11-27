@@ -1160,7 +1160,7 @@ namespace XUSS.BLL.Compras
             }
         }
         public int InsertWROUT(string connection, string WOH_CODEMP, DateTime WOH_FECHASAL, DateTime WOH_FECHAENT, string BDBODEGA, string BDBODEGA1, string BDBODEGA2, int TRCODTER,string WOH_OBSERVACIONES, string WOH_USUARIO, string WOH_ESTADO, 
-            object tbItems, object tbBL, object tbBLDT,object tbSoportes, object tbSegregacion)
+            string WOH_NROALT, object tbItems, object tbBL, object tbBLDT,object tbSoportes, object tbSegregacion)
         {
             SessionManager oSessionManager = new SessionManager(connection);
             MovimientosBL ObjM = new MovimientosBL();
@@ -1179,7 +1179,7 @@ namespace XUSS.BLL.Compras
                 //Descargue Normal
                 #region
                 //Insert WR OUT HD
-                OrdenesComprasBD.InsertWROUT(oSessionManager, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO, 0);
+                OrdenesComprasBD.InsertWROUT(oSessionManager, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO, 0, WOH_NROALT);
                 
                 //Obtener Otra Bodega
                 foreach (DataRow rw in (tbItems as DataTable).Rows)                
@@ -1357,7 +1357,7 @@ namespace XUSS.BLL.Compras
                     WOH_CONSECUTIVO = ComunBL.GeneraConsecutivo(connection, "WROUT");
                     //Insert WR OUT HD
                     //OrdenesComprasBD.InsertWROUT(oSessionManager, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO, 0);
-                    OrdenesComprasBD.InsertWROUT(oSessionManager, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO, 0);
+                    OrdenesComprasBD.InsertWROUT(oSessionManager, WOH_CONSECUTIVO, WOH_CODEMP, WOH_FECHASAL, WOH_FECHAENT, BDBODEGA, BDBODEGA1, BDBODEGA2, TRCODTER, WOH_OBSERVACIONES, WOH_USUARIO, WOH_ESTADO, 0, WOH_NROALT);
 
                     WIH_CONSECUTIVO = "";
                     //Obtener Otra Bodega

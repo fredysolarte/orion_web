@@ -20,8 +20,7 @@ namespace XUSS.WEB.Consultas
         }
         protected void btn_buscar_click(object sender, EventArgs e)
         {
-            string filtro = " AND 1=1";
-            string lc_in = "";
+            string filtro = " AND 1=1", lc_in = "";            
             
             var cll_linea = rc_linea.CheckedItems;
             if (cll_linea.Count != 0)

@@ -11,7 +11,7 @@ namespace WFC_ORION.BLL
 {
     public class tb_comericialBL
     {
-        public List<tb_comercial> geDesistalacion(string inConnection, string inFiltro)
+        public List<tb_comercial> getComercial(string inConnection, string inFiltro)
         {
             DBAccess Obj = new DBAccess();
             List<tb_comercial> lst = new List<tb_comercial>();
@@ -37,18 +37,18 @@ namespace WFC_ORION.BLL
             }
         }
 
-        public static tb_comercial getItemComercial(SqlDataReader Reader)
+        public tb_comercial getItemComercial(SqlDataReader Reader)
         {
             tb_comercial item = new tb_comercial();
 
             try
             {
-                item.co_codigo = Convert.ToInt32(Reader["CO_CODIGO"]);
+                item.co_codigo = Reader.IsDBNull(Reader.GetOrdinal("CO_CODIGO")) ? null : (int?)Convert.ToInt32(Reader["CO_CODIGO"]);
                 item.co_codemp = Convert.ToString(Reader["CO_CODEMP"]);
                 item.ph_codigo = Convert.ToInt32(Reader["PH_CODIGO"]);
-                item.co_cuotas = Convert.ToInt32(Reader["CO_CUOTAS"]);
-                item.co_precio = Convert.ToDouble(Reader["CO_PRECIO"]);
-                item.trcodter = Convert.ToInt32(Reader["TRCODTER"]);
+                item.co_cuotas = Reader.IsDBNull(Reader.GetOrdinal("CO_CUOTAS")) ? null : (int?)Convert.ToInt32(Reader["CO_CUOTAS"]);
+                item.co_precio = Reader.IsDBNull(Reader.GetOrdinal("CO_PRECIO")) ? null : (double?)Convert.ToDouble(Reader["CO_PRECIO"]);
+                item.trcodter = Reader.IsDBNull(Reader.GetOrdinal("TRCODTER")) ? null : (int?)Convert.ToInt32(Reader["TRCODTER"]);
                 item.co_fecha = Convert.ToString(Reader["CO_FECHA"]);
                 item.co_estado = Convert.ToString(Reader["CO_ESTADO"]);
                 item.co_usuario = Convert.ToString(Reader["CO_USUARIO"]);

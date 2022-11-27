@@ -67,5 +67,31 @@ namespace WFC_ORION.Controllers
                 itm = null;
             }
         }
+
+        //Dictionary<string, object> inDatos
+        [HttpPost("UploadImageComercialPH")]
+        public ActionResult<lst_resultado> UploadImageComercialPH(int inretorno, int tipo, int consecutivo, string nombre, string usuario,string fechaHora, List<IFormFile> image)
+        {
+            RPMultintegral Obj = new RPMultintegral();
+            lst_resultado itm = new lst_resultado();
+
+            int ln_retorno = 0;
+            try
+            {
+                ln_retorno = Obj.InsertEvidenciaComercial(Configuration.GetValue<string>("Settings:DefaultConnection"), "001", consecutivo, tipo, usuario, image);
+                itm.id = inretorno;
+                itm.error = "";
+
+                return itm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                itm = null;
+            }
+        }
     }
 }

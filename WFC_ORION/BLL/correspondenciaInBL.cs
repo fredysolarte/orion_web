@@ -94,8 +94,8 @@ namespace WFC_ORION.BLL
 
             try
             {
-                item.cih_codigo = Convert.ToInt32(Reader["CIH_CODIGO"]);
-                item.cid_item = Convert.ToInt32(Reader["CID_ITEM"]);
+                item.cih_codigo = Reader.IsDBNull(Reader.GetOrdinal("CIH_CODIGO")) ? null : (int?)Convert.ToInt32(Reader["CIH_CODIGO"]);
+                item.cid_item = Reader.IsDBNull(Reader.GetOrdinal("CID_ITEM")) ? null : (int?)Convert.ToInt32(Reader["CID_ITEM"]);
                 item.ph_codigo = Convert.ToInt32(Reader["PH_CODIGO"]);
                 item.cid_asesor = Convert.ToString(Reader["CID_ASESOR"]);
                 item.cid_usuario = Convert.ToString(Reader["CID_USUARIO"]);

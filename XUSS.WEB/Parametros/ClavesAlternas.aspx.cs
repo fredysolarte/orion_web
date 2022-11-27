@@ -97,8 +97,22 @@ namespace XUSS.WEB.Parametros
 
         protected void btn_buscar_Click(object sender, EventArgs e)
         {
-            string filtro = "AND 1=1";
+            string filtro = "AND 1=1", lc_in = "";
+            
 
+            var cll_linea = rc_linea.CheckedItems;
+            if (cll_linea.Count != 0)
+            {
+                lc_in = "";
+                filtro += " AND ASTIPPRO IN (";
+                foreach (var item in cll_linea)
+                    lc_in += "'" + Convert.ToString(item.Value) + "',";
+
+                filtro += lc_in.Substring(0, lc_in.Length - 1) + ")";
+            }
+
+            if (!string.IsNullOrWhiteSpace(txt_nombre.Text))
+                filtro += " AND ASNOMBRE LIKE '%"+ txt_nombre.Text.ToUpper() +"%'";
 
             if (!string.IsNullOrWhiteSpace(filtro))
                 filtro = filtro.Substring(4, filtro.Length - 4);

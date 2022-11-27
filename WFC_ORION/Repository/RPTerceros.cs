@@ -33,6 +33,7 @@ namespace WFC_ORION.Repository
         private static List<consulta_terceros_ph> GetTercerosMultintegralPH(DBAccess ObjDB, string inFiltro)
         {
             List<consulta_terceros_ph> lst = new List<consulta_terceros_ph>();
+            TercerosBL ObjT = new TercerosBL();
             try
             {
                 using (SqlDataReader reader = TercerosBD.GetTercerosMultintegralPH(ObjDB, inFiltro))
@@ -42,7 +43,7 @@ namespace WFC_ORION.Repository
                         consulta_terceros_ph item = new consulta_terceros_ph();
                         try
                         {
-                            item.terceros.Add(TercerosBL.GetTercerosItem(reader));
+                            item.terceros.Add(ObjT.getTercerosItem(reader));
                             item.id = Convert.ToInt32(reader["TRCODTER"]);
                             item.POTENCIAL = reader.IsDBNull(reader.GetOrdinal("POTENCIAL")) ? null : (int?)Convert.ToInt32(reader["POTENCIAL"]);
                             item.INSTALADOS = reader.IsDBNull(reader.GetOrdinal("INSTALADOS")) ? null : (int?)Convert.ToInt32(reader["INSTALADOS"]);
@@ -62,7 +63,7 @@ namespace WFC_ORION.Repository
                         }
                         finally
                         {
-                            item = null;
+                            item = null;                            
                         }                        
                     }
                 }
@@ -75,6 +76,7 @@ namespace WFC_ORION.Repository
             finally
             {
                 lst = null;
+                ObjT = null;
             }
         }
     }

@@ -232,6 +232,10 @@
                             AllowFiltering="false" HeaderText="Can Ctl" ItemStyle-HorizontalAlign="Right"
                             Resizable="true" SortExpression="BBCANCTL">
                         </telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="BBBODPED" HeaderButtonType="TextButton" HeaderStyle-Width="80px" ItemStyle-ForeColor="Salmon" ItemStyle-Font-Bold="true"
+                            AllowFiltering="false" HeaderText="Can Ped" ItemStyle-HorizontalAlign="Right"
+                            Resizable="true" SortExpression="BBBODPED">
+                        </telerik:GridBoundColumn>
                         <telerik:GridBoundColumn DataField="BBBODEGA" HeaderButtonType="TextButton" HeaderStyle-Width="20px"
                             AllowFiltering="false" HeaderText="" ItemStyle-HorizontalAlign="Right"
                             Resizable="true" SortExpression="BBBODEGA">

@@ -94,5 +94,28 @@ namespace XUSS.DAL.Parametros
                 sSql = null;
             }
         }
+        public static DataTable GetClavesAlternas(SessionManager oSessionManager, string ARCODEMP, string ARTIPPRO, int ASNIVELC,string ASESTADO)
+        {
+            StringBuilder sSql = new StringBuilder();
+            try
+            {
+                sSql.AppendLine("SELECT ASCLAVEO,ASNOMBRE              ");
+                sSql.AppendLine("  FROM ARTICSEC WITH(NOLOCK) ");
+                sSql.AppendLine(" WHERE ASCODEMP = @p0");
+                sSql.AppendLine("   AND ASTIPPRO = @p1");
+                sSql.AppendLine("   AND ASNIVELC = @p2");
+                sSql.AppendLine("   AND ASESTADO = @p3");
+
+                return DBAccess.GetDataTable(oSessionManager, sSql.ToString(), CommandType.Text, ARCODEMP, ARTIPPRO, ASNIVELC, ASESTADO);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sSql = null;
+            }
+        }
     }
 }

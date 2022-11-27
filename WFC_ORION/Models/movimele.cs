@@ -8,10 +8,10 @@ namespace WFC_ORION.Models
     public class movimele
     {
         public string mecodemp { get; set; }
-        public int meidmovi { get; set; }
-        public int meiditem { get; set; }
-        public int meidlote { get; set; }
-        public int meidelem { get; set; }
+        public int? meidmovi { get; set; }
+        public int? meiditem { get; set; }
+        public int? meidlote { get; set; }
+        public int? meidelem { get; set; }
         public string mefecmov { get; set; }
         public string mebodega { get; set; }
         public string metippro { get; set; }
@@ -23,11 +23,11 @@ namespace WFC_ORION.Models
         public string mecdlote { get; set; }
         public string mecdelem { get; set; }
         public string mecdtran { get; set; }
-        public double mecantid { get; set; }
-        public double mecanori { get; set; }
-        public double mebonifi { get; set; }
+        public double? mecantid { get; set; }
+        public double? mecanori { get; set; }
+        public double? mebonifi { get; set; }
         public string meumelem { get; set; }
-        public int menroele { get; set; }
+        public int? menroele { get; set; }
         public string melocali { get; set; }
         public double? mepesobr { get; set; }
         public double? mepesont { get; set; }

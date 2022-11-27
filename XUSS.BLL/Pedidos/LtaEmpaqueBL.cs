@@ -113,9 +113,6 @@ namespace XUSS.BLL.Pedidos
                 LH_LSTPAQ = ComunBD.GeneraConsecutivo(oSessionManager, "NROLST", LH_CODEMP);
                 //Cabecera Lista Empaque
                 Obj.InsertListaHD(oSessionManager, LH_CODEMP, LH_LSTPAQ, LH_PEDIDO, LH_BODEGA, LH_NMUSER);
-                //Insert Movimiento Inventario
-                //ln_nromovimiento = Objm.InsertMovimiento(oSessionManager,LH_CODEMP,0,LH_BODEGA,null,"30",null,null,null,Convert.ToString(LH_LSTPAQ),System.DateTime.Today,null,
-                //                                        "CE",".",LH_NMUSER,null,null,null,null,null);
 
                 //Movimiento Inventario
                 foreach (DataRow row in dt.Rows)
@@ -125,7 +122,6 @@ namespace XUSS.BLL.Pedidos
                         ln_nromovimiento = Objm.InsertMovimiento(oSessionManager, LH_CODEMP, 0, LH_BODEGA, null, "30", null, null, null, Convert.ToString(LH_LSTPAQ), System.DateTime.Today, null,
                                                         "CE", ".", LH_NMUSER, null, null, null, null, null,null,null,null);
 
-                        //Objm.InsertMovimiento(oSessionManager, LH_CODEMP, LH_BODEGA, null, System.DateTime.Today, "30", Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),
                         Objm.InsertMovimiento(oSessionManager, LH_CODEMP, Convert.ToString(row["MBBODEGA"]), null, System.DateTime.Today, "30", Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),
                                           Convert.ToString(row["C2"]), Convert.ToString(row["C3"]), Convert.ToString(row["C4"]), ".", Convert.ToDouble(row["MLCANTID"]),
                                           Convert.ToDouble(row["MLCANTID"]), "UN", ln_nromovimiento, 0, Convert.ToInt32(row["IT"]), Convert.ToString(row["MLCDLOTE"]), null,
@@ -138,7 +134,6 @@ namespace XUSS.BLL.Pedidos
                         ln_nromovimiento = Objm.InsertMovimiento(oSessionManager, LH_CODEMP, 0, LH_BODEGA, null, "30", null, null, null, Convert.ToString(LH_LSTPAQ), System.DateTime.Today, null,
                                                         "CE", ".", LH_NMUSER, null, null, null, null, null,null,null,null);
 
-                        //Objm.InsertMovimiento(oSessionManager, LH_CODEMP, LH_BODEGA, null, System.DateTime.Today, "30", Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),
                         Objm.InsertMovimiento(oSessionManager, LH_CODEMP, Convert.ToString(row["MBBODEGA"]), null, System.DateTime.Today, "30", Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),                        
                                           Convert.ToString(row["C2"]), Convert.ToString(row["C3"]), Convert.ToString(row["C4"]), ".", Convert.ToDouble(row["MBCANTID"]),
                                           Convert.ToDouble(row["MBCANTID"]), "UN", ln_nromovimiento, 0, Convert.ToInt32(row["IT"]), Convert.ToString(row["MLCDLOTE"]), null,
@@ -182,11 +177,6 @@ namespace XUSS.BLL.Pedidos
                     }
                     foreach (DataRow rw in dtItm.Rows)
                     {
-                        //if (Convert.ToString(row["TP"]) == Convert.ToString(rw["TP"]) &&
-                        //     Convert.ToString(row["C1"]) == Convert.ToString(rw["C1"]) &&
-                        //     Convert.ToString(row["C2"]) == Convert.ToString(rw["C2"]) &&
-                        //     Convert.ToString(row["C3"]) == Convert.ToString(rw["C3"]) &&
-                        //     Convert.ToString(row["C4"]) == Convert.ToString(rw["C4"]))
                         if (Convert.ToString(row["IT"]) == Convert.ToString(rw["IT"]))
                             lb_ind = false;
 
@@ -213,7 +203,9 @@ namespace XUSS.BLL.Pedidos
                     Obj.InsertListaDT(oSessionManager, LH_CODEMP, LH_LSTPAQ, Convert.ToInt32(row["IT"]), Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),
                                       Convert.ToString(row["C2"]), Convert.ToString(row["C3"]), Convert.ToString(row["C4"]), Convert.ToDouble(row["CAN"]),
                                       0, Convert.ToString(row["BD"]), ".", 0, Convert.ToInt32(row["nro_mov"]), "AC", ".", LH_NMUSER);
-                    //0, LH_BODEGA, "." , 0, ln_nromovimiento, "AC", ".", LH_NMUSER);
+
+                    Objm.updateCantidadesPedidos(oSessionManager, LH_CODEMP, Convert.ToString(row["BD"]), Convert.ToString(row["TP"]), Convert.ToString(row["C1"]),
+                                      Convert.ToString(row["C2"]), Convert.ToString(row["C3"]), Convert.ToString(row["C4"]), ".",Convert.ToDouble(row["CAN"]) * -1, LH_NMUSER);
                 }
                 //Inserta Cajas
                 foreach (DataRow row in (tbCajas as DataTable).Rows)
@@ -391,6 +383,22 @@ namespace XUSS.BLL.Pedidos
             try
             {
                 return LtaEmpaqueBD.GetEvidenciasFoto(oSessionManager, EV_CODIGO);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                oSessionManager = null;
+            }
+        }
+
+        public double getCantidadesPedidos(string connection, string CODEMP, string TP, string C1, string C2, string C3, string C4, string BD) {
+            SessionManager oSessionManager = new SessionManager(connection);
+            try
+            {
+                return LtaEmpaqueBD.getCantidadesPedidos(oSessionManager, CODEMP, TP, C1, C2, C3, C4, BD);
             }
             catch (Exception ex)
             {

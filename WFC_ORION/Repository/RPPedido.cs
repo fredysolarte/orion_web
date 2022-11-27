@@ -14,26 +14,12 @@ namespace WFC_ORION.Repository
         #region       
         public IEnumerable<PedidoHD> GetPedidoHD(string inConnection,DateTime PHPECPED)
         {
-            DBAccess Obj = new DBAccess();
-            //Obj.ConnectionString = "Data Source=190.94.251.11;Initial Catalog=orion_multintegral;User ID=sa;Password=Seguro1;";
+            DBAccess Obj = new DBAccess();            
             Obj.ConnectionString = inConnection;
-
-            return _GetPedidoHD(Obj, "001", PHPECPED);
-        }
-        public IEnumerable<inPedidos> GetPedidoHD(string inConnection, string inFiltro)
-        {
-            DBAccess Obj = new DBAccess();
-            //Obj.ConnectionString = "Data Source=190.94.251.11;Initial Catalog=orion_multintegral;User ID=sa;Password=Seguro1;";
-            Obj.ConnectionString = inConnection;
-
-            return _GetPedidoHD(Obj, "001", inFiltro);
-        }
-        private static List<PedidoHD> _GetPedidoHD(DBAccess ObjDB, string EMPRESA, DateTime P_FECHA)
-        {
             List<PedidoHD> lst = new List<PedidoHD>();
             try
             {
-                using (SqlDataReader reader = Pedido.GetPedidos(ObjDB, EMPRESA, P_FECHA))
+                using (SqlDataReader reader = Pedido.GetPedidos(Obj, "001", PHPECPED))
                 {
                     while (reader.Read())
                     {
@@ -46,40 +32,66 @@ namespace WFC_ORION.Repository
             {
                 throw ex;
             }
-            finally
-            {
+            finally {
+                Obj = null;
                 lst = null;
-            }            
+            }
         }
-        private static List<inPedidos> _GetPedidoHD(DBAccess ObjDB, string EMPRESA, string inFiltro)
+        public IEnumerable<inPedidos> GetPedidoHD(string inConnection, string inFiltro)
         {
+            DBAccess Obj = new DBAccess();
+            DBAccess ObjLH = new DBAccess();
+            DBAccess ObjFH = new DBAccess();
+            Obj.ConnectionString = inConnection;
+            ObjLH.ConnectionString = inConnection;
+            ObjFH.ConnectionString = inConnection;
             List<inPedidos> lst = new List<inPedidos>();
-           
-            try
-            {
-                using (SqlDataReader reader = Pedido.GetPedidos(ObjDB, EMPRESA, inFiltro))
+            TercerosBL ObjT = new TercerosBL();
+            Lista_EmpaqueBL objL = new Lista_EmpaqueBL();
+            facturasBL ObjF = new facturasBL();
+            try {
+                using (SqlDataReader reader = Pedido.GetPedidos(Obj, "001", inFiltro))
                 {
                     while (reader.Read())
                     {
                         inPedidos item = new inPedidos();
                         item.id = Convert.ToInt32(reader["PHPEDIDO"]);
                         item.inPedido.Add(GetPedidoHDItem(reader));
-                        item.tercero.Add(TercerosBL.GetTercerosItem(reader));
+                        item.tercero.Add(ObjT.getTercerosItem(reader));
+                        using (SqlDataReader rlh = Lista_EmpaqueBD.getEmpaquesHD(ObjLH, "001", " AND LH_PEDIDO ="+Convert.ToString(reader["PHPEDIDO"]))) {
+                            while (rlh.Read()) {
+                                item.empaquehd.Add(objL.getEmpaqueHD(rlh));
+
+                                using (SqlDataReader rlf = facturasBD.getFacturasHD(ObjFH, "001", " AND LH_LSTPAQ =" + Convert.ToString(rlh["LH_LSTPAQ"]))) {
+                                    while (rlf.Read()) {
+                                        item.facturahd.Add(ObjF.getFacturaHD(rlf));
+                                    }
+                                }
+                            }
+                        }
+                        
                         lst.Add(item);
                         item = null;
                     }
                 }
+
                 return lst;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
+            finally {
+                Obj = null;
                 lst = null;
+                ObjT = null;
+                ObjLH = null;
+                objL = null;
+                ObjFH = null;
+                ObjF = null;
             }
-        }
+            //return _GetPedidoHD(Obj, "001", inFiltro);
+        }             
         private static PedidoHD GetPedidoHDItem(SqlDataReader Reader)
         {
             PedidoHD item = new PedidoHD();
@@ -263,6 +275,8 @@ namespace WFC_ORION.Repository
         public int id { get; set; }
         public List<PedidoHD> inPedido { get; set; } = new List<PedidoHD>();
         public List<Terceros> tercero { get; set; } = new List<Terceros>();
+        public List<tb_empaquehd> empaquehd { get; set; } = new List<tb_empaquehd>();
+        public List<facturahd> facturahd { get; set; } = new List<facturahd>();
     }
 
     public class inPedidosFL {

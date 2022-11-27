@@ -63,6 +63,28 @@ namespace XUSS.DAL.Pedidos
                 sSql = null;
             }
         }
+        public static double getCantidadesPedidos(SessionManager oSessionManager, string CODEMP, string TP, string C1, string C2, string C3, string C4, string BD)
+        {
+            StringBuilder sSql = new StringBuilder();
+            try
+            {
+                sSql.AppendLine("SELECT ISNULL((SUM(PDCANTID)-SUM(LD_CANTID)),0) DIFF ");
+                sSql.AppendLine("FROM PEDIDODT WITH(NOLOCK) ");
+                sSql.AppendLine("INNER JOIN PEDIDOHD WITH(NOLOCK) ON (PHCODEMP = PDCODEMP AND PDPEDIDO = PHPEDIDO)     ");               
+                sSql.AppendLine(" WHERE PDCODEMP=@p0 AND PDTIPPRO=@p1 AND PDCLAVE1=@p2 AND PDCLAVE2=@p3 AND PDCLAVE3=@p4 AND PDCLAVE4=@p5 AND PDBODEGA=@p6 AND PHESTADO IN ('LQ')");
+
+
+                return Convert.ToDouble(DBAccess.GetScalar(oSessionManager, sSql.ToString(), CommandType.Text, CODEMP, TP, C1, C2, C3, C4, BD));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sSql = null;
+            }
+        }
         public static DataTable GetDetalleMovimientos(SessionManager oSessionManager, string CODEMP, int LH_LSTPAQ, int ITEM)
         {
             StringBuilder sSql = new StringBuilder();
@@ -91,7 +113,7 @@ namespace XUSS.DAL.Pedidos
             StringBuilder sSql = new StringBuilder();
             try
             {
-                sSql.AppendLine("SELECT BBBODEGA,BBCANTID,BBTIPPRO,BBCLAVE1,BBCLAVE2,BBCLAVE3,BBCLAVE4,BLCDLOTE,BLCANTID,BLDTTEC1,BLDTTEC2,BDNOMBRE,@p7 IT");
+                sSql.AppendLine("SELECT BBBODEGA,BBCANTID,BBBODPED,BBTIPPRO,BBCLAVE1,BBCLAVE2,BBCLAVE3,BBCLAVE4,BLCDLOTE,BLCANTID,BLDTTEC1,BLDTTEC2,BDNOMBRE,@p7 IT");
                 sSql.AppendLine("FROM BALANBOD WITH(NOLOCK)");
                 sSql.AppendLine("INNER JOIN TBBODEGA ON (BBCODEMP = BDCODEMP AND BBBODEGA = BDBODEGA)");
                 sSql.AppendLine("LEFT OUTER JOIN BALANLOT ON (BBCODEMP = BLCODEMP AND BBCLAVE1 = BLCLAVE1 AND BBCLAVE2 = BLCLAVE2 AND BBCLAVE3 = BLCLAVE3 AND BBCLAVE4 = BLCLAVE4 AND BBBODEGA = BLBODEGA AND BLCANTID> 0 )");                

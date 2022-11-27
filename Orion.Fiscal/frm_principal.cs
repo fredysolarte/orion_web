@@ -90,6 +90,7 @@ namespace Orion.Fiscal
                 ln_total = Math.Round(ln_total, 0);
                 if (chk_igtf.Checked)
                 {
+                    ln_total = ln_total * 100;
                     slog.AppendLine(PFComando("E|U|" + Convert.ToString(ln_total)));
                     //slog.AppendLine(PFComando("E|U"));
                     //slog.AppendLine(PFtotal());

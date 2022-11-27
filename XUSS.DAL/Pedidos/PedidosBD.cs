@@ -217,6 +217,27 @@ namespace XUSS.DAL.Pedidos
                 sSql = null;
             }
         }
+
+        public static int UpdatePedidoHD(SessionManager oSessionManager, string PHCODEMP, int PHPEDIDO, int PHCODCLI, int PHCODSUC, int? PHAGENTE,
+                                          double PHTRMLOC, string PHESTADO, string PHUSERLQ, string PHLISPRE, string PHOBSERV, DateTime PHFECLIQ)
+        {
+            StringBuilder sSql = new StringBuilder();
+            try
+            {
+                sSql.AppendLine("UPDATE PEDIDOHD SET PHESTADO=@p0,PHUSERLQ=@p1,PHFECMOD=GETDATE(),PHLISPRE=@p4,PHOBSERV=@p5,PHCODCLI=@p6,PHAGENTE=@p7,PHTRMLOC=@p8,PHFECLIQ=@p9,PHCODSUC=@p10 WHERE PHCODEMP=@p2 AND PHPEDIDO=@p3 ");
+
+                return DBAccess.ExecuteNonQuery(oSessionManager, sSql.ToString(), CommandType.Text, PHESTADO, PHUSERLQ, PHCODEMP, PHPEDIDO, PHLISPRE, PHOBSERV, PHCODCLI, PHAGENTE, PHTRMLOC, PHFECLIQ, PHCODSUC);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sSql = null;
+            }
+        }
+
         public static int UpdatePedidoHD(SessionManager oSessionManager, string PHCODEMP, int PHPEDIDO, int PHCODCLI, int PHCODSUC, string PHTIPPED,
                                           string PHIDIOMA, string PHMONEDA, double PHTRMLOC, double PHTRMUSD, double PHTRMPED,
                                           string PHTIPDES, double PHDESCU1, double PHDESPAG,
